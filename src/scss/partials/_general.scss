@@ -1,0 +1,62 @@
+.login-form {
+	// background-image: url("../assets/images/logo.jpg");
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-attachment: fixed;
+	height: 99vh;
+}
+.register-form {
+	background-image: url("../assets/images/logo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.label-space {
+	padding-right: 20px;
+}
+.register-space {
+	padding: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.employee-header {
+	font-size: 20px;
+	font-weight: 600;
+}
+.form-control-label {
+	font-weight: 600;
+}
+.popup-close {
+	color: #333333 !important;
+	right: 3px;
+	font-size: 28px;
+	bottom: 10px;
+	cursor: pointer !important;
+	float: right;
+	position: relative;
+	height: 10px;
+}
+.mat-list-item-content {
+	font-family: "Roboto";
+	font-size: 15px;
+	font-weight: 500;
+}
+.invalid-input {
+	color: #f70d1f;
+}
+.check {
+	background-color: #3f51b5;
+	color: white;
+	cursor: pointer;
+}
+.uncheck {
+	background-color: white;
+}
+.edit-icon {
+	margin-left: 20px;
+	margin-top: 2px;
+}
+.task-list {
+	padding: 20px 0px;
+	font-weight: 500;
+	font-size: 17px;
+}

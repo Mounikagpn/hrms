@@ -1,0 +1,9 @@
+@import '~bootstrap/scss/bootstrap';
+@import "ag-grid-community/dist/styles/ag-grid.css";
+@import "ag-grid-community/dist/styles/ag-theme-alpine.css";
+@import "partials/general";
+
+.ngxmdp .selector {
+	left: -12vw !important;
+	position: absolute !important;
+}

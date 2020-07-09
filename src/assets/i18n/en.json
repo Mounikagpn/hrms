@@ -1,0 +1,80 @@
+{
+	"USER_NAME": "User Name",
+	"PASSWORD": "Password",
+	"FIRST_NAME": "First Name",
+	"MIDDLE_NAME": "Middle Name",
+	"LAST_NAME": "Last Name",
+	"DATE_OF_BIRTH": "Date of Birth",
+	"BLOOD_GROUP": "Blood Group",
+	"EMAIL_ID": "Email ID",
+	"PHONE_NUMBER": "Phone Number",
+	"PRIMARY_PHONE": "Primary Phone Number",
+	"ALTERNATIVE_PHONE_NUMBER": "Alternative Phone Number",
+	"MARTIAL_STATUS": "Martial Status",
+	"GENDER": "Gender",
+
+	"VALIDATION_ERRORS": {
+		"USER_NAME_REQUIRED": "Username is required",
+		"USER_NAME_VALID": "Username must be a valid email address",
+		"PASSWORD_REQUIRED": "Password is required",
+		"PASSOWRD_VALID": "Password must be alteast 6 characters",
+		"FIRST_NAME_REQUIRED": "First Name is required",
+		"LAST_NAME_REQUIRED": "Last Name is required",
+		"ROLE_NAME_REQUIRED": "Role Name is required"
+	},
+
+	"BUTTONS": {
+		"REGISTER": "Register",
+		"LOGIN": "Login",
+		"OK": "Ok",
+		"CANCEL": "Cancel"
+	},
+
+	"LABELS": {
+		"EMPLOYEE_REGISTRATION": "Employee Registration",
+		"PERSONAL_INFORMATION": "Personal Information",
+		"ADDRESS": "Address",
+		"EDUCATION_WORK_INFO": "Education and Work Information",
+		"EMPLOYEE_DETAILS": "Employee Information"
+	},
+
+	"ADDRESS_LINE_1": "Address Line 1",
+	"ADDRESS_LINE_2": "Address Line 2",
+	"CITY": "City",
+	"STATE": "State",
+	"COUNTRY": "Country",
+	"ZIP_CODE": "Zip Code",
+	"HIGHEST_DEGREE": "Highest Degree",
+	"YEAR_REWARDED": "Year Rewarded",
+	"NUMBER_OF_YEARS": "Number of Years",
+	"INSTITUTION_NAME": "Institution Name",
+	"INSTITUTION_ADDRESS": "Institution Address",
+
+	"EMPLOYEE_DETAILS": {
+		"EMPLOYEE_NUMBER": "Employee Number",
+		"EMPLOYEE_STATUS": "Employee Status",
+		"EMPLOYEE_START_DATE": "Employee Start Date",
+		"CONTACT_INFORMATION": "Employee Contact Information",
+		"WORK_INFORMATION": "Employee Work Information",
+		"ADDRESS": "Employee Address",
+		"EDUCATION": "Employee Education",
+		"ELIGIBLE_VACATION_DAYS": "Eligible Vacation Days",
+		"NUMBER_OF_SICK_DAYS": "Number of Sick Days",
+		"RECRUITMENT_METHOD": "Recruitment Method",
+		"EXPERIENCE": "Experience",
+		"EMPLOYMENT_START_DATE": "Employment Start Date",
+		"EMPLOYMENT_END_DATE": "Employment End Date"
+	},
+	"USER_MANAGEMENT": {
+		"MANAGE_ROLES": "Manage Roles",
+		"ADD_ROLE": "Add Role",
+		"ROLES": "Roles",
+		"PRIVILEGES": "Privileges",
+		"USER_PREVILEGIES": "User Previleges",
+		"MANAGE_PRIVILEGES": "Manage Previleges"
+	},
+	"USER_PROFILE": {
+		"LOGOUT": "Logout",
+		"EDIT_PROFILE": "Edit Profile"
+	}
+}
