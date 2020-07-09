@@ -1,0 +1,151 @@
+<div class="login-form">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 p-b-20">
+        <div class="register-space" *ngIf="employee">
+          <h3 style="padding-bottom: 20px;">Employee Details&nbsp;(<a href="javascript:void(0)">{{employee.employee_number}}</a>)</h3>
+          <mat-tab-group>
+            <mat-tab label="{{ 'EMPLOYEE_DETAILS.CONTACT_INFORMATION' | translate }}">
+              <ng-template matTabContent>
+                <div class="row d-flex align-items-end">
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'FIRST_NAME' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.firstname}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'MIDDLE_NAME' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.middlename}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'LAST_NAME' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.lastname}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'GENDER' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.gender}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'DATE_OF_BIRTH' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.date_of_birth}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMAIL_ID' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.email}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'PRIMARY_PHONE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.primary_phone_number}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'ALTERNATIVE_PHONE_NUMBER' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.alternate_phone_number}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'MARTIAL_STATUS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.marital_status}}</p>
+                  </div>
+                </div>
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="{{ 'EMPLOYEE_DETAILS.ADDRESS' | translate }}">
+              <ng-template matTabContent>
+                <div class="row d-flex align-items-end">
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'ADDRESS_LINE_1' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.address_line1}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'ADDRESS_LINE_2' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.address_line2}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'CITY' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.city}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'STATE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.state}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'ZIP_CODE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.zip_code}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'COUNTRY' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.country}}</p>
+                  </div>
+                </div>
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="{{ 'EMPLOYEE_DETAILS.EDUCATION' | translate }}">
+              <ng-template matTabContent>
+                <div class="row d-flex align-items-end">
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'HIGHEST_DEGREE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.highest_degree}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'YEAR_REWARDED' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.year_awarded}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'NUMBER_OF_YEARS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.number_of_years}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'INSTITUTION_NAME' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.institution_name}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'INSTITUTION_ADDRESS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.institution_address}}</p>
+                  </div>
+                </div>
+              </ng-template>
+            </mat-tab>
+            <mat-tab label="{{ 'EMPLOYEE_DETAILS.WORK_INFORMATION' | translate }}">
+              <ng-template matTabContent>
+                <div class="row d-flex align-items-end">
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_NUMBER' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.employee_number}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_STATUS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.employee_status}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYMENT_START_DATE' | translate }}:
+                    </p>
+                    <p class="col-lg-6">{{employee.employment_start_date}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYMENT_END_DATE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.employment_end_date}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EXPERIENCE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.experience}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.RECRUITMENT_METHOD' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.recruitment_method}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.NUMBER_OF_SICK_DAYS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.no_of_sick_days}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.ELIGIBLE_VACATION_DAYS' | translate }}:
+                    </p>
+                    <p class="col-lg-6">{{employee.eligible_vacation_days}}</p>
+                  </div>
+                </div>
+                </ng-template>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

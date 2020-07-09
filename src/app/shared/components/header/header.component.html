@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    
+    <span> Resource Management&nbsp; </span>
+
+    <button mat-icon-button (click)="toggleSideBar()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+        <li>
+          <button mat-icon-button>
+            <mat-icon>settings</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-icon-button>
+            <mat-icon>help_outline</mat-icon>
+          </button>
+        </li>
+        <li>
+          <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>person_outline</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>{{ 'USER_PROFILE.EDIT_PROFILE' | translate }}</button>
+            <button mat-menu-item (click)="logout()"> {{ 'USER_PROFILE.LOGOUT' | translate }}</button>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+  </mat-toolbar-row>
+
+
+</mat-toolbar>

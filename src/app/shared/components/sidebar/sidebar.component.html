@@ -1,0 +1,15 @@
+<mat-nav-list>
+  <div class="profile-card">
+    <img src="assets/images/admin-avatar.png" alt="">
+    <div class="header">
+      <h4>{{username}}</h4>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <!-- <h2 matSubheader>Pages</h2> -->
+
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/employees-list">Employees List</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/user-management/role-privileges">User Management</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/task-management/tasks">Tasks</a>
+</mat-nav-list>

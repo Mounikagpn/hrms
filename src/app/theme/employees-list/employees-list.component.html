@@ -1,0 +1,103 @@
+<!-- <ag-grid-angular 
+    style="width: 700px; height: 500px;" 
+    class="ag-theme-balham"
+    [gridOptions]="gridOptions"
+    >
+</ag-grid-angular> -->
+
+<div class="" style="padding-top: 50px;">
+  <!-- <div class="test"></div> -->
+  <ag-grid-angular
+      #agGrid
+      style="margin: auto;"
+      id="myGrid"
+      class="ag-theme-alpine"
+      [modules]="modules"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [rowData]="rowData"
+      [domLayout]="domLayout"
+      [pagination]="true"
+      [paginationPageSize]="paginationPageSize"
+      (firstDataRendered)="onFirstDataRendered($event)"
+      (gridReady)="onGridReady($event)"
+    ></ag-grid-angular>
+</div>
+
+<!-- <div class="grid-wrapper">
+  <div id="myGrid" style="height: 100%;" class="ag-theme-alpine"></div>
+</div> -->
+
+
+<div bsModal #employeeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{backdrop: 'static'}"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="popup-close" data-dismiss="panel" aria-label="success-close" id="hide"
+                      (click)="close()">&times;</a>
+        <h5 class="employee-header">{{ 'LABELS.EMPLOYEE_DETAILS' | translate }}<a href="javascript:void(0);">({{employeeId}})</a></h5>
+      </div>
+      <div class="modal-body text-left modal-padding-body"*ngIf="employee">
+        <div class="row d-flex col-lg-12">
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_NUMBER' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employee_number}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'FIRST_NAME' | translate }}: </p>
+            <p class="col-lg-6">{{employee.firstname}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'LAST_NAME' | translate }}: </p>
+            <p class="col-lg-6">{{employee.lastname}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'GENDER' | translate }}: </p>
+            <p class="col-lg-6">{{employee.gender}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'DATE_OF_BIRTH' | translate }}: </p>
+            <p class="col-lg-6">{{employee.date_of_birth}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMAIL_ID' | translate }}: </p>
+            <p class="col-lg-6">{{employee.email}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_START_DATE' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employment_start_date}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_START_DATE' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employment_start_date}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_START_DATE' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employment_start_date}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_START_DATE' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employment_start_date}}</p>
+          </div>
+          <div class="row d-flex col-lg-6">
+            <p class="col-lg-6 form-control-label">{{ 'EMPLOYEE_DETAILS.EMPLOYEE_START_DATE' | translate }}: </p>
+            <p class="col-lg-6">{{employee.employment_start_date}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary search-btn" (click)="close();">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <ag-grid-angular
+  #caseGrid
+  class="ag-theme-balham ag-grid"
+  [columnDefs]="columnDefs"
+  [gridOptions]="gridOptions"
+  [rowData]="rowData"
+  [domLayout]="domLayout"
+>
+</ag-grid-angular> -->
