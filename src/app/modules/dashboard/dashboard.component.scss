@@ -1,0 +1,51 @@
+.all-header {
+	width: auto;
+	height: 22px;
+	border-radius: 30px;
+	color: white;
+	padding: 0px 7px;
+	margin-right: 5px;
+	background-color: #685aa2;
+	min-width: 30px;
+	font-size: 10px;
+}
+.new-header {
+	width: auto;
+	height: 22px;
+	border-radius: 30px;
+	color: white;
+	padding: 0px 7px;
+	margin-right: 5px;
+	background-color: #a89cd6;
+	min-width: 30px;
+	font-size: 10px;
+}
+
+.inprogress-header {
+	width: auto;
+	height: 22px;
+	border-radius: 30px;
+	color: white;
+	padding: 0px 7px;
+	margin-right: 5px;
+	background-color: #e8b632;
+	min-width: 30px;
+	font-size: 10px;
+}
+.complete-header {
+	width: auto;
+	height: 22px;
+	border-radius: 30px;
+	color: white;
+	padding: 0px 7px;
+	margin-right: 5px;
+	background-color: #a3ed60;
+	min-width: 30px;
+	font-size: 10px;
+}
+.task {
+	float: right;
+	background-color: #3f51b5;
+	color: white;
+	border-radius: 30px;
+}
