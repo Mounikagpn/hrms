@@ -31,14 +31,10 @@ const routes: Routes = [
 				path: 'employee-details',
 				component: EmployeeDetailsComponent
 			},
-			// {
-			// 	path: 'user-management',
-			// 	component: UserManagementComponent
-			// },
 			{
 				path: 'user-management',
-				loadChildren: './theme/user-management/user-management.module#UserManagementModule',
-				canActivate: [ AuthGuard ]
+				loadChildren: './theme/user-management/user-management.module#UserManagementModule'
+				// canActivate: [ AuthGuard ]
 			},
 			{
 				path: 'task-management',
