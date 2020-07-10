@@ -1,0 +1,27 @@
+.role-info {
+	padding: 65px 0px 20px 30px;
+}
+.privilege-info {
+	padding: 10px 20px;
+}
+.role-data {
+	margin-right: 20px;
+	padding: 7px 0px;
+	background-color: #fff;
+	background-clip: border-box;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+	max-width: 325px;
+	margin-bottom: 20px;
+}
+.mat-icon {
+	cursor: pointer;
+}
+.card {
+	cursor: pointer;
+}
+.role-privilege-container {
+	.invalid-input {
+		padding: 10px 0 0 15px;
+	}
+}

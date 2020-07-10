@@ -1,0 +1,11 @@
+:host ::ng-deep .mat-tab-body-content {
+	overflow: hidden;
+	padding: 20px;
+	background-color: white;
+}
+:host ::ng-deep .mat-tab-group {
+	border: 1px solid rgba(0, 0, 0, 0.125);
+}
+:host ::ng-deep .mat-tab-labels {
+	background-color: #e5e2e2;
+}

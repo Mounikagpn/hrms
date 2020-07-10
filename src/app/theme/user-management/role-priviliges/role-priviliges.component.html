@@ -1,0 +1,105 @@
+<div class="form role-privilege-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 p-0">
+
+        <mat-tab-group>
+          <mat-tab label="{{ 'USER_MANAGEMENT.ROLES' | translate }}">
+            <ng-template matTabContent>
+              <div [formGroup]="rolePrivilegesForm" class="row d-flex align-items-end col-lg-12">
+                <div class="col-lg-4">
+                  <h3>{{ 'USER_MANAGEMENT.MANAGE_ROLES' | translate }}</h3>
+                  <input type="text" class="form-control" placeholder="Enter Role" formControlName="role_name"
+                  [ngClass]="{ 'is-invalid': (submitted ||f.role_name.touched) && f.role_name.errors }"/>
+                </div>
+                <div class="col-lg-4">
+                  <button mat-raised-button color="primary"
+                    (click)="addRole()">{{ 'USER_MANAGEMENT.ADD_ROLE' | translate }}</button>
+                </div>
+              </div>
+              <div *ngIf="((submitted ||f.role_name.touched) && f.role_name.errors)" class="invalid-input">
+                <div *ngIf="f.role_name.errors.required">{{ 'VALIDATION_ERRORS.ROLE_NAME_REQUIRED' | translate }}
+                </div>
+             </div>
+
+              <div class="row d-flex col-lg-12 role-info">
+                <div class="row ml-0 d-flex role-data col-lg-4" *ngFor="let roles of rolesData">
+                  <div class="col-lg-10">{{roles.role_name}}</div>
+                  <i class="fa fa-pencil edit-icon" matTooltip="Edit Role Name" aria-hidden="true"></i>
+                  <!-- <mat-icon matTooltip="Edit Role Name">edit</mat-icon> -->
+                </div>
+              </div>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="{{ 'USER_MANAGEMENT.PRIVILEGES' | translate }}">
+            <ng-template matTabContent>
+              <div class="row d-flex align-items-end col-lg-12">
+                <div class="col-lg-4">
+                  <h3>{{ 'USER_MANAGEMENT.MANAGE_PRIVILEGES' | translate }}</h3>
+                  <!-- <input type="text" class="form-control" formControlName="role"> -->
+                  <select [(ngModel)]="selectedRoleId" class="form-control">
+                    <option value="0" disabled>Select Roles</option>
+                    <option *ngFor="let role of  rolesData" [value]="role.role_id">
+                      {{role.role_name}}
+                      <br>
+                    </option>
+                  </select>
+                </div>
+                <div class="col-lg-4">
+                </div>
+              </div>
+
+              <div *ngFor="let privilege of privilegesKey"
+                style="padding-top: 60px;padding-bottom: 0px">
+
+                <div class="col-lg-4 m-t-30" style="padding-bottom: 20px">
+                  <b>{{privilege.Name}}</b>
+                </div>
+                <div class="col-lg-12 row d-flex" >
+                  <div class="col-lg-4" (click)="selectAuthority(item)" *ngFor="let item of privilege.Value"
+                  style="padding-top: 1%;">
+                  <div class="card" id="{{item.authorityId}}">
+                    <div class="privilege-info">
+                      <span>{{item.authorityName}}</span></div>
+                    <!-- <i class="fa fa-times imagecalender" aria-hidden="true"></i> -->
+                  </div>
+                </div>
+                </div>
+                
+
+              </div>
+              <button type="button" class="btn btn-success float-right" (click)="submit()">Save</button>
+            </ng-template>
+          </mat-tab>
+          <mat-tab label="{{ 'USER_MANAGEMENT.USER_PREVILEGIES' | translate }}">
+            <ng-template matTabContent>
+              <!-- <div class="row d-flex align-items-end">
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'HIGHEST_DEGREE' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.highest_degree}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'YEAR_REWARDED' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.year_awarded}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'NUMBER_OF_YEARS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.number_of_years}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'INSTITUTION_NAME' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.institution_name}}</p>
+                  </div>
+                  <div class="row d-flex col-lg-6">
+                    <p class="col-lg-6 form-control-label">{{ 'INSTITUTION_ADDRESS' | translate }}: </p>
+                    <p class="col-lg-6">{{employee.institution_address}}</p>
+                  </div>
+                </div> -->
+            </ng-template>
+          </mat-tab>
+        </mat-tab-group>
+
+      </div>
+    </div>
+  </div>
+</div>
