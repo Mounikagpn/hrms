@@ -8,8 +8,13 @@
   <mat-divider></mat-divider>
   <!-- <h2 matSubheader>Pages</h2> -->
 
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
+  <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">Dashboard</a>
   <a mat-list-item routerLinkActive="list-item-active" routerLink="/employee/employees-list">Employees List</a>
   <a mat-list-item routerLinkActive="list-item-active" routerLink="/user-management/role-privileges">User Management</a>
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/task-management/tasks">Tasks</a>
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/task-management/tasks">Tasks</a> -->
+  <span *ngFor="let sideNav of menuItems">
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['/'+sideNav.state]">
+      {{sideNav.name}}
+    </a>
+  </span>
 </mat-nav-list>
