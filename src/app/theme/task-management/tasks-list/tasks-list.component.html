@@ -1,0 +1,46 @@
+<div class="col-md-12 p-0">
+  <mat-tab-group>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="card all-header">40</span>All
+      </ng-template>
+      <ng-template matTabContent>
+        <div class="task-list">
+          <p>List of Tasks</p>
+        </div>
+        <div class="task-data" *ngFor="let data of tasks">
+          <p>{{data.text}}</p>
+          <p>Due Date : {{data.date}}</p>
+        </div> 
+      </ng-template>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="card new-header">14</span>New
+      </ng-template>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="card inprogress-header">6</span>InProgess
+      </ng-template>
+    </mat-tab>
+    <mat-tab>
+      <ng-template mat-tab-label>
+        <span class="card complete-header">20</span>Completed
+      </ng-template>
+    </mat-tab>
+    <mat-tab disabled>
+      <ng-template mat-tab-label>
+      </ng-template>
+    </mat-tab>
+    <mat-tab disabled>
+      <ng-template mat-tab-label>
+        <button class="task" mat-button>
+          <mat-icon >add</mat-icon>Create Task
+      </button>
+      </ng-template>
+  </mat-tab>
+  </mat-tab-group>
+
+
+</div>
