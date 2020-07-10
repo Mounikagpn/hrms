@@ -1,42 +1,36 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DefaultComponent } from './default.component';
-import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.component';
-import { RouterModule } from '@angular/router';
-import { SharedModule } from 'src/app/shared/shared.module';
-import {
-	MatSidenavModule,
-	MatTabsModule,
-	MatButtonModule,
-	MatIcon,
-	MatIconModule,
-	MatCardModule
-} from '@angular/material';
+
+import { EmployeeComponent } from './employee.component';
+
+import { EmployeeRoutingModule } from './employee.routing';
+import { SharedModule } from './../../shared/shared.module';
+import { MatSidenavModule, MatTabsModule, MatButtonModule, MatIconModule, MatTooltipModule } from '@angular/material';
 import { AgGridModule } from 'ag-grid-angular';
 import { BsDatepickerModule, BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
-import { LoginComponent } from 'src/app/theme/login/login.component';
-import { EmployeeRegistrationComponent } from 'src/app/theme/employee-registration/employee-registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { EmployeesListComponent } from './employees-list/employees-list.component';
+import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 @NgModule({
-	declarations: [ DefaultComponent, DashboardComponent, LoginComponent, EmployeeRegistrationComponent ],
+	declarations: [ EmployeeComponent, EmployeesListComponent, EmployeeDetailsComponent ],
 	imports: [
 		CommonModule,
-		RouterModule,
-		SharedModule,
 		FormsModule,
 		ReactiveFormsModule,
-		BsDatepickerModule,
-		ModalModule.forRoot(),
+		SharedModule,
 		MatSidenavModule,
 		MatTabsModule,
-		MatButtonModule,
 		MatIconModule,
-		MatCardModule,
+		MatButtonModule,
+		EmployeeRoutingModule,
+		BsDatepickerModule,
+		MatTooltipModule,
+		ModalModule.forRoot(),
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
@@ -46,9 +40,10 @@ import { AccordionModule } from 'ngx-bootstrap/accordion';
 		}),
 		AgGridModule.withComponents([]),
 		AccordionModule.forRoot()
-	]
+	],
+	providers: []
 })
-export class DefaultModule {}
+export class EmployeeModule {}
 export function HttpLoaderFactory(http: HttpClient) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
