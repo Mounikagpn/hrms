@@ -86,7 +86,7 @@ export class EmployeesListComponent implements OnInit {
 			this.employee = result;
 			this.employee['firstname'] = result['first name'];
 			this.employee['lastname'] = result['last name'];
-			this.router.navigate([ '/employee-details' ], { queryParams: { id } });
+			this.router.navigate([ '/employee/employee-details' ], { queryParams: { id } });
 			//this.employeeModal.show();
 		});
 	}

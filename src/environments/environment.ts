@@ -4,7 +4,7 @@
 
 export const environment = {
 	production: false,
-	apiBase: 'http://13.234.78.206:4000',
+	apiBase: 'http://13.235.245.133:4000',
 	googleAPIKey: 'AIzaSyD-l-EjuTbuqg4IliAWY7xBhuFUuImEmhA'
 };
 
