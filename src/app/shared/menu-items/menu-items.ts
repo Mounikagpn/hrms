@@ -40,6 +40,20 @@ export class MenuItems {
 	MENUITEMS = [
 		{
 			main: [
+				// {
+				// 	displayName: 'Dashboard',
+				// 	route: 'dashboard'
+				// },
+				// {
+				// 	displayName: 'Employee',
+				// 	route: 'employee',
+				// 	children: [
+				// 		{
+				// 			displayName: 'Employee List',
+				// 			route: 'employee/employees-list'
+				// 		}
+				// 	]
+				// }
 				{
 					state: 'dashboard',
 					name: 'Dashboard'

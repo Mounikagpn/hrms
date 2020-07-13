@@ -9,16 +9,18 @@ import {
 	MatIconModule,
 	MatButtonModule,
 	MatMenuModule,
-	MatListModule
+	MatListModule,
+	MatSidenavModule
 } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MenuListItemComponent } from './menu-list-item/menu-list-item.component';
 
 @NgModule({
-	declarations: [ HeaderComponent, FooterComponent, SidebarComponent ],
+	declarations: [ HeaderComponent, FooterComponent, SidebarComponent, MenuListItemComponent ],
 	imports: [
 		CommonModule,
 		MatDividerModule,
@@ -27,6 +29,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 		MatButtonModule,
 		FlexLayoutModule,
 		MatMenuModule,
+		MatSidenavModule,
 		MatListModule,
 		RouterModule,
 		TranslateModule.forRoot({
