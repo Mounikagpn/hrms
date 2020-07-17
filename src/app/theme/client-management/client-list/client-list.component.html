@@ -1,0 +1,144 @@
+<div class="card">
+    <div class="row" style="padding-top:3%">
+
+        <!-- <div class="card text-center col-lg-2" style="
+        margin-left: 70px;
+        " *ngFor="let x of  listOfleavecount ">
+            <h3 [style.color]='x.color' style="text-align: center;padding-top:7%"><b>{{x.value}} </b></h3>
+            <p style="text-align: center">{{x.key}}</p>
+      
+        </div> -->
+        <div class="card text-center col-lg-2" style="
+        margin-left: 70px;">
+            <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+            <p style="text-align: center">Total Clients</p>
+
+        </div>
+        <div class="card text-center col-lg-2" style="
+        margin-left: 70px;">
+            <h3 style="text-align: center;padding-top:7%"><b>0</b></h3>
+            <p style="text-align: center">Active</p>
+
+        </div>
+        <div class="card text-center col-lg-2" style="
+        margin-left: 70px;">
+            <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+            <p style="text-align: center">Inactive
+
+            </p>
+
+        </div>
+        <div class="card text-center col-lg-2" style="
+        margin-left: 70px;">
+            <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+            <p style="text-align: center">Pending For Approval</p>
+
+        </div>
+        &nbsp;&nbsp;&nbsp;
+    </div>
+    <div class="row" style="padding-top:3%">
+
+        <!-- <div class="card text-center col-lg-2" style="
+    margin-left: 70px;
+    " *ngFor="let x of  listOfleavecount ">
+        <h3 [style.color]='x.color' style="text-align: center;padding-top:7%"><b>{{x.value}} </b></h3>
+        <p style="text-align: center">{{x.key}}</p>
+  
+    </div> -->
+        &nbsp;&nbsp;&nbsp;
+        <!-- 
+    <div class="col-lg-3 col-md-6">
+        <div class="ibox bg-danger color-white widget-stat">
+            <div class="ibox-body">
+                <h2 class="m-b-5 font-strong">{{closedJobsCount}}</h2>
+                <div class="m-b-5">JOBS CLOSED</div><i class="fa fa-lock widget-stat-icon"></i>
+  
+            </div>
+        </div>
+    </div> -->
+    </div>
+
+
+
+    <div class="roww">
+        <div class="col-lg-6">
+            <h3>Client List</h3>
+        </div>
+        <div class="col-lg-6" style="
+          text-align: end;
+      ">
+            <button routerLink="/client-management/client-creation" type="button" class="btn btn-success">Add
+                Client</button>
+        </div>
+
+    </div>
+    <div class="row">
+
+
+
+
+
+        <div class="table-responsive">
+            <div class="ibox-body">
+
+                <div class="container">
+
+
+
+                    <table class="table table-bordered" cellspacing="0">
+                        <thead>
+                            <tr style="background-color: whitesmoke;">
+                                <th>Client Name</th>
+                                <th>Contact Person Name</th>
+                                <th>Email ID</th>
+
+                                <th>Contact Number</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                            <tr>
+                                <td>JOB PLANET</td>
+                                <td>NAIDU</td>
+                                <td>naidu@prutech.com</td>
+                                <td>7324041600</td>
+                                <td>Active</td>
+                                <td><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> &nbsp;</td>
+
+                            </tr>
+
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Are you sure want to Delete?</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleTextarea">Remarks</label>
+                            <textarea class="form-control" id="exampleTextarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Delete</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

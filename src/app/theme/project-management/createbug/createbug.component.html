@@ -1,0 +1,156 @@
+<br>
+<!--ngx-spinner [fullScreen]="false" type="ball-clip-rotate-multiple" size="medium">
+ 
+</ngx-spinner>-->
+<div class="card">
+  <div class="card-header">
+    <div class="card style">
+      <strong>Create Bug</strong>
+    </div>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="bugCreationForm">
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+          <label>Bug Title *</label>
+          <input type="text" class="form-control input-rounded" formControlName="bugTitle"
+            placeholder="Max length 75 characters" />
+          <span
+            *ngIf="bugCreationForm.controls['bugTitle'].hasError('required') && bugCreationForm.controls['bugTitle'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Priority</label>
+          <br>
+
+          <select class="form-control input-rounded" formControlName="Priority">
+
+            <option selected disabled value="">Select Priority *</option>
+            <option >
+              priority
+            </option>
+
+          </select>
+          <span
+            *ngIf="bugCreationForm.controls['Priority'].hasError('required') && bugCreationForm.controls['Priority'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+
+          <label> severity*</label>
+
+          <br>
+
+          <select class="form-control input-rounded" formControlName="severity">
+
+            <option selected disabled value="">Select Severity </option>
+            <option >
+             severity
+            </option>
+
+          </select>
+          <span
+            *ngIf="bugCreationForm.controls['severity'].hasError('required') && bugCreationForm.controls['severity'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+        </div>
+        <div class="col-sm-6">
+          <label> Issue In*</label>
+
+          <br>
+          <select class="form-control input-rounded" formControlName="Issue">
+            <option selected disabled value=""> Issue Type </option>
+            <option>App</option>
+            <option selected>Application</option>
+            <option>Design</option>
+
+          </select>
+          <span
+            *ngIf="bugCreationForm.controls['Issue'].hasError('required') && bugCreationForm.controls['Issue'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="col-sm-6">
+          <label>Attachment Type</label>
+          <br>
+          <select class="form-control input-rounded" (change)="fileTypeSelect() " formControlName="Attachment">
+
+            <option selected disabled value="">Select Attachment Type </option>
+            <option >
+              attachmenttype
+            </option>
+
+          </select>
+          <span
+            *ngIf="bugCreationForm.controls['Attachment'].hasError('required') && bugCreationForm.controls['Attachment'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Environment *</label>
+
+          <br>
+          <select class="form-control input-rounded" formControlName="Environment">
+            <option selected disabled value=""> Environment Type </option>
+            <option>UAT</option>
+            <option >AWS/Production</option>
+       
+
+          </select>
+          <span
+            *ngIf="bugCreationForm.controls['Issue'].hasError('required') && bugCreationForm.controls['Issue'].touched"
+            style="color:red" class="failed.validation">
+            Field Required
+          </span>
+        </div>
+      </div>
+
+
+      <div class="row box" style="padding: 2px;" *ngIf="show">
+        <div class="col-lg-3">
+
+          <div class="default-file-upload" style=" padding-left: 16px;">
+            <label> </label>
+            <input id="file-upload1" type="file" (change)="fileChanges($event)" style="
+                padding-left: 17px;
+            " />
+          </div>
+        </div>
+        <!-- <div class="col-lg-2" style=" padding-top: 17px;  ">
+          <button class="btn btn-primary" (click)="UploadFiles()">Attachments </button>
+        </div> -->
+        <!-- <div class="col-lg-4">
+      </div> -->
+      </div>
+
+      <div class="col-sm-12" style="padding-left: 30px;">
+        <label>
+          Description
+        </label>
+        <textarea rows="4" cols="50" class="form-control" placeholder="Max length 250 characters"
+          formControlName="description">
+                                  </textarea>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <button type="submit" class="btn btn-info" *ngIf="!updtBtn" [disabled]="!bugCreationForm.valid" (click)="createBug()">Submit
+    </button>
+    <button type="submit" class="btn btn-info"  *ngIf="updtBtn" [disabled]="!bugCreationForm.valid" (click)="editBug()">Update
+    </button>
+    <button type="reset" class="btn btn-secondary" (click)="cancel()" >Cancel
+    </button>
+  </div>
+</div>

@@ -35,7 +35,19 @@ const routes: Routes = [
 				path: 'task-management',
 				loadChildren: './theme/task-management/task-management.module#TaskManagementModule'
 				// canActivate: [ AuthGuard ]
-			}
+			},
+			{
+				path: 'client-management',
+				loadChildren: './theme/client-management/client-management.module#ClientManagementModule'
+				// canActivate: [ AuthGuard ]
+			},
+			{
+				path: 'project-management',
+				loadChildren: './theme/project-management/project-management.module#ProjectManagementModule'
+				// canActivate: [ AuthGuard ]
+			},
+			
+			
 		]
 	},
 	{

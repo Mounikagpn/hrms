@@ -7362,4 +7362,10 @@ hr {
 .user--offline:after {
 	background: #bbb;
 }
+.form-control
+{
+    height: unset!important;
+    font-size: unset!important;
+}
+  
 /*# sourceMappingURL=.map */

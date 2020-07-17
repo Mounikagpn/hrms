@@ -19,6 +19,7 @@ import { environment } from 'src/environments/environment';
 import { Grid } from 'ag-grid-community';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { MenuItems } from './shared/menu-items/menu-items';
+import { CustomInterceptor } from './core/interceptors/http.interceptor';
 @NgModule({
 	declarations: [ AppComponent, GooglePlacesDirective ],
 	imports: [
@@ -46,7 +47,8 @@ import { MenuItems } from './shared/menu-items/menu-items';
 		}),
 		AccordionModule.forRoot()
 	],
-	providers: [ MenuItems ],
+	providers: [ MenuItems ,
+],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { fromEventPattern } from 'rxjs';
 import { EmployeesListComponent } from './employees-list/employees-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 const routes: Routes = [
 	{
 		path: 'employees-list',
@@ -11,7 +12,12 @@ const routes: Routes = [
 	{
 		path: 'employee-details',
 		component: EmployeeDetailsComponent
+	},
+	{
+		path: 'employee-profile',
+		component: EmployeeProfileComponent
 	}
+	
 ];
 
 @NgModule({

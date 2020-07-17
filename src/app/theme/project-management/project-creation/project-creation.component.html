@@ -1,0 +1,169 @@
+<div class="row">
+  <div class="col-md-12">
+    <div style="padding-top: 2%">
+      <div class="panel panel-default panel-shadow">
+        <div class="panel-heading" style="padding-left: 0px;">
+
+          <div class="card style">
+            <strong> Manage Projects</strong>
+          </div>
+        </div>
+        <div class="panel-body">
+          <form [formGroup]="projectmanagerForm">
+            <div class="col-sm-12">
+              <div class="col-sm-6">
+                <label>Project Name * :</label>
+                <input type="text" class="form-control" placeholder="MAX Length 75 Characters"
+                  formControlName="projectName">
+                <span
+                  *ngIf="projectmanagerForm.controls['projectName'].hasError('required') && projectmanagerForm.controls['projectName'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <span *ngIf="projectmanagerForm.controls['projectName'].hasError('pattern')"
+                  class="failed-validation">
+                  Name Should be Alphabet And Numeric
+                </span>
+                <span *ngIf="projectmanagerForm.controls['projectName'].hasError('maxlength')"
+                  class="failed-validation">
+                  Name Should Not be Greather Than 75 Characters
+                </span>
+              </div>
+              <!-- <div class="col-sm-6">
+
+              <label>Project Code</label>
+              <input type="text" class="form-control" placeholder="Project Code" formControlName="projectName"
+               >
+            </div> -->
+              <div class="col-sm-6">
+                <!-- [(ngModel)]="registrationobj.organizationAddress.country" -->
+                <label for="sel1">Project Manager *:</label>
+                <select class="form-control" formControlName="projectManager">
+
+                  <option value="" disabled> Select Project Manager</option>
+                  <option >
+                   
+                  </option>
+                </select>
+                <span
+                  *ngIf="projectmanagerForm.controls['projectManager'].hasError('required') && projectmanagerForm.controls['projectManager'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+
+              </div>
+            </div>
+
+            <div class="col-sm-12" style="padding-top: 2%;">
+              <div class="col-sm-6">
+                <label>Project Manager Contact Number *:</label>
+                <input type="text" class="form-control" placeholder="Enter a 10 digit valid Contact Number"
+                  formControlName="projectManagerContact" (keypress)="this.global.keyPress($event)" maxlength=10>
+                <span
+                  *ngIf="projectmanagerForm.controls['projectManagerContact'].hasError('required') && projectmanagerForm.controls['projectManagerContact'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <span *ngIf="projectmanagerForm.controls['projectManagerContact'].hasError('minlength')"
+                  class="failed-validation">
+                  Phone Number Must be 10 Digits
+                </span>
+
+              </div>
+              <div class="col-sm-6">
+                <!-- [(ngModel)]="registrationobj.organizationAddress.country" -->
+                <label for="sel1">Project Type *:</label>
+                <select class="form-control" formControlName="projectType">
+                  <option selected [ngValue]="undefined">Select Project Type *</option>
+                  <option >
+                    
+                  </option>
+                </select>
+                <span
+                  *ngIf="projectmanagerForm.controls['projectType'].hasError('required') && projectmanagerForm.controls['projectType'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+              </div>
+            </div>
+            <!-- <div class="col-sm-6">
+              
+              <label for="sel1">project resources*:</label>
+              <select class="form-control" (change)="oncountryChange($event.target.value)" id="Country"
+               >
+                <option disabled [ngValue]="undefined">project resources*:</option>
+                <option *ngFor="let employee of employees">
+                  {{employee.firstName}}
+                </option>
+              </select>
+            </div> -->
+            <div class="col-sm-12" style="padding-top: 2%;">
+              <div class="col-sm-6">
+                <!-- [(ngModel)]="registrationobj.organizationAddress.country" -->
+                <!-- [value]="country.countryId" -->
+                <label for="sel1">Client *:</label>
+                <select class="form-control" id="client" formControlName="client">
+                  <option value="" disabled> Select Client</option>
+                  <option >
+                    
+                  </option>
+                </select>
+                <span
+                  *ngIf="projectmanagerForm.controls['client'].hasError('required') && projectmanagerForm.controls['client'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+              </div>
+              <!-- <div class="col-sm-6">
+              <label>Approved By</label>
+              <input type="text" class="form-control" placeholder="Approved By"
+               >
+            </div> -->
+              <div class="col-sm-6">
+                <label>Start Date *:</label>
+                <input type="text" placeholder="MM/DD/YYYY" class="form-control" bsDatepicker
+                  formControlName="startDate">
+
+
+
+                <!-- <input type="date" class="form-control" placeholder="Start Date" formControlName="startDate"[min]="this.minDate"
+               > -->
+                <span
+                  *ngIf="projectmanagerForm.controls['startDate'].hasError('required') && projectmanagerForm.controls['startDate'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-12" style="padding-top: 2%;">
+              <div class="col-sm-6">
+                <label>End Date :</label>
+                <input type="text" placeholder="MM/DD/YYYY" class="form-control" 
+                   formControlName="endDate">
+                <!-- <input type="date" class="form-control" placeholder="End Date" formControlName="endDate" [min]="this.projectObject.startDate"> -->
+
+              </div>
+            </div>
+            <!-- <div class="col-sm-6">
+                              <label>End Date</label>
+                              <input type="date" class="form-control" placeholder="End Date">
+                          </div> -->
+            <div class="float-right" style="padding-top: 3%;">
+              <button type="button" *ngIf="!UpdateBtn" [disabled]="!projectmanagerForm.valid" class="btn btn-info"
+                (click)="onSubmit()">&nbsp;Submit</button>
+
+              <button type="button" *ngIf="!UpdateBtn" class="btn btn-secondary" data-toggle="modal"
+                data-target="#updateLocationModal"
+                [routerLink]="['/project-management/manage-project']">&nbsp;Cancel</button>
+
+              <button type="button" *ngIf="UpdateBtn" [disabled]="!projectmanagerForm.valid" class="btn btn-success"
+                (click)="update()">&nbsp;Update</button>
+              <button type="button" *ngIf="UpdateBtn" class="btn btn-secondary" data-toggle="modal"
+                data-target="#updateLocationModal" (click)="back()">&nbsp;Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

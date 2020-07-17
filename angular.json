@@ -25,12 +25,16 @@
 						"assets": [ "src/favicon.ico", "src/assets" ],
 						"styles": [
 							"./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-							"src/styles.scss",
-							"src/scss/style.scss",
 							"node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-							"node_modules/font-awesome/css/font-awesome.min.css"
+							"node_modules/font-awesome/css/font-awesome.min.css",
+							"node_modules/bootstrap/dist/css/bootstrap.css",
+							"src/styles.scss",
+							"src/scss/style.scss"
 						],
-						"scripts": []
+						"scripts": [
+							"node_modules/jquery/dist/jquery.min.js",
+							"node_modules/bootstrap/dist/js/bootstrap.min.js"
+						]
 					},
 					"configurations": {
 						"production": {

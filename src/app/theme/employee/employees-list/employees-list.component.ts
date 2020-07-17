@@ -22,7 +22,7 @@ export class EmployeesListComponent implements OnInit {
 	paginationPageSize;
 	employeeId;
 	employee;
-	constructor(private http: HttpClient, private readonly httpService: HttpService, private readonly router: Router) {
+	constructor(private http: HttpClient, private readonly httpService: HttpService, private  router: Router) {
 		this.columnDefs = [
 			// {
 			// 	headerName: '',
@@ -75,11 +75,17 @@ export class EmployeesListComponent implements OnInit {
 	onGridReady(params) {
 		this.gridApi = params.api;
 		this.gridColumnApi = params.columnApi;
+		
+	}
+	ngOnInit() {
+		this.getEmployeeDetails()
+	}
+	getEmployeeDetails() {
 		this.httpService.doGet('emplist').subscribe((result) => {
 			this.rowData = result['Employees'];
+			console.log(this.rowData,"this.rowData")
 		});
 	}
-	ngOnInit() {}
 	redirect(id) {
 		this.employeeId = id;
 		this.httpService.doPost('empdetails', { employee_number: id }).subscribe((result) => {
@@ -92,5 +98,10 @@ export class EmployeesListComponent implements OnInit {
 	}
 	close() {
 		this.employeeModal.hide();
+	}
+
+	getEmployeView(list)
+	{
+		this.router.navigate([ '/employee/employee-details' ], { queryParams: {id: list.employee_number}  });
 	}
 }

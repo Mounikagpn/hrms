@@ -69,6 +69,14 @@ export class MenuItems {
 				{
 					state: 'task-management/tasks',
 					name: 'Tasks'
+				},
+				{
+					state: '/client-management/client-list',
+					name: 'Manage Client'
+				},
+				{
+					state: '/project-management/project-list',
+					name: 'Manage Project'
 				}
 			]
 		}

@@ -4,10 +4,54 @@
     [gridOptions]="gridOptions"
     >
 </ag-grid-angular> -->
+<div class="card">
+  <div class="row" style="padding-top:3%">
 
-<div class="" style="padding-top: 50px;">
+    <!-- <div class="card text-center col-lg-2" style="
+    margin-left: 70px;
+    " *ngFor="let x of  listOfleavecount ">
+        <h3 [style.color]='x.color' style="text-align: center;padding-top:7%"><b>{{x.value}} </b></h3>
+        <p style="text-align: center">{{x.key}}</p>
+  
+    </div> -->
+    <div class="card text-center col-lg-2" style="
+    margin-left: 70px;">
+        <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+        <p style="text-align: center">Total Employees</p>
+
+    </div>
+    <div class="card text-center col-lg-2" style="
+    margin-left: 70px;">
+        <h3 style="text-align: center;padding-top:7%"><b>0</b></h3>
+        <p style="text-align: center">New Employees</p>
+
+    </div>
+    <div class="card text-center col-lg-2" style="
+    margin-left: 70px;">
+        <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+        <p style="text-align: center">Active Employees
+
+        </p>
+
+    </div>
+    <div class="card text-center col-lg-2" style="
+    margin-left: 70px;">
+        <h3 style="text-align: center;padding-top:7%"><b>0 </b></h3>
+        <p style="text-align: center">Inactive Employees</p>
+
+    </div>
+    &nbsp;&nbsp;&nbsp;
+</div>
+  
+<div class="col-lg-12" style="padding-top: 20px;cursor: pointer;">
+  <div style="
+  margin-left: 12px;
+">
+    <strong>Employee List</strong>
+  </div>
+ <br>
   <!-- <div class="test"></div> -->
-  <ag-grid-angular
+  <!-- <ag-grid-angular
       #agGrid
       style="margin: auto;"
       id="myGrid"
@@ -21,14 +65,59 @@
       [paginationPageSize]="paginationPageSize"
       (firstDataRendered)="onFirstDataRendered($event)"
       (gridReady)="onGridReady($event)"
-    ></ag-grid-angular>
-</div>
+    ></ag-grid-angular> -->
+    <div class="table-responsive-sm">
+      <table class="table table-bordered table-hover">
+          <thead class="thead-light">
+              <tr>
+                  <th>Employee Number</th>
+                  <th>Last name</th>
+                  <th>First name</th>
+                  <th>Email</th>
+                  <th>Gender</th>
+                  <th>Employment Start Date</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let list of rowData" (click)="getEmployeView(list)">
+                  <td>{{list.employee_number}}</td>
+                  <td>{{list.lastname}} </td>
+                  <td>{{list.firstname}} </td>
+                  <td>{{list.email}} </td>
+                  <td>{{list.gender}} </td>
+                  <td>{{list.employment_start_date}} </td>
+                  <td> <span>
+                    <i matTooltip="View Employee Detail" class="fa fa-eye fa-lg"
+                       aria-hidden="true"></i> &nbsp;
+                </span></td>
+              
+              </tr>
+          </tbody>
+      </table>
+      <!-- <div class="float-right" *ngIf="responsePageCount>1" style="position: absolute;
+      right: 0px;">
+          <button (click)="onBtnnPrevious()" class="btn btn-outline-primary" [disabled]="disablePreviousButton">Previous</button>
+          <b>{{pageId+1}}/{{responsePageCount}}&nbsp;</b>
+          <button (click)="onBtnNext()" class="btn btn-outline-primary" [disabled]="disableNextButton">Next</button>
+      </div> -->
+      <!-- <div class="col-md-12 text-right" *ngIf="responsePageCount>1" >
+          <ul class="pagination float-right">
+              <li class="page-item hoverActive"><a class="page-link " [class.my-class]="pageId === 0" (click)="previ()"><i class="fas fa-chevron-left"> </i></a></li>
+              <li class="page-item"><a class="page-link">{{pageId+1}}/{{responsePageCount}}</a></li>
+              <li class="page-item hoverActive"><a class="page-link" [class.my-class]="pageId+1 === responsePageCount" (click)="next()"><i class="fas fa-chevron-right"></i></a></li>
+          </ul>
+      </div> -->
+  </div>
+
+
+  </div>
 
 <!-- <div class="grid-wrapper">
   <div id="myGrid" style="height: 100%;" class="ag-theme-alpine"></div>
 </div> -->
 
-
+<!-- 
 <div bsModal #employeeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" [config]="{backdrop: 'static'}"
   aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -91,7 +180,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- <ag-grid-angular
   #caseGrid
   class="ag-theme-balham ag-grid"
@@ -101,3 +190,7 @@
   [domLayout]="domLayout"
 >
 </ag-grid-angular> -->
+</div>
+
+
+

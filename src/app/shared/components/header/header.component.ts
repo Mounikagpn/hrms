@@ -18,4 +18,8 @@ export class HeaderComponent implements OnInit {
 		sessionStorage.clear();
 		this.router.navigate([ '/login' ]);
 	}
+	employeeProfilePage()
+	{
+		this.router.navigate([ '/employee/employee-profile' ] );
+	}
 }

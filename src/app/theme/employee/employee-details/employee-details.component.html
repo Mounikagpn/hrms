@@ -1,11 +1,11 @@
-<div class="login-form">
+<!-- <div class="login-form">
   <div class="container">
     <div class="row">
       <div class="col-md-12 p-b-20">
         <div class="register-space" *ngIf="employee">
           <h3 style="padding-bottom: 20px;">Employee Details&nbsp;(<a href="javascript:void(0)">{{employee.employee_number}}</a>)</h3>
           <mat-tab-group>
-            <mat-tab label="{{ 'EMPLOYEE_DETAILS.CONTACT_INFORMATION' | translate }}">
+            <mat-tab label="Employee Person Details">
               <ng-template matTabContent>
                 <div class="row d-flex align-items-end">
                   <div class="row d-flex col-lg-6">
@@ -47,7 +47,7 @@
                 </div>
               </ng-template>
             </mat-tab>
-            <mat-tab label="{{ 'EMPLOYEE_DETAILS.ADDRESS' | translate }}">
+            <mat-tab label="Employee Address">
               <ng-template matTabContent>
                 <div class="row d-flex align-items-end">
                   <div class="row d-flex col-lg-6">
@@ -148,4 +148,491 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="card">
+  <div style="
+  margin-left: 18px;
+  margin-top: 20px;
+">
+    <h3 style="padding-bottom: 20px;">Employee Details&nbsp;(<a href="javascript:void(0)">1500</a>)</h3>
+  </div>
+  
+<div class="container" style="
+margin-top: 7px;
+">
+
+
+  <!-- Links -->
+  <div class="card-header tab-card-header" style="
+    background-color: #3f51b5;
+">
+    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+      <li class="nav-item" *ngFor="let wallet of coinwallet; let first = first;" [ngClass]="{firstItem: first}"
+        role="presentation" class="accounts_li" [class.active]="selectedwallet===wallet">
+        <a class="nav-link" style="
+              cursor: pointer;
+          " (click)="selectedwallet = wallet " (click)="resetRolesAndPrivilizesPage(wallet)" aria-controls="one"
+          role="tab" data-toggle="tab">{{wallet}}</a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+<div class="container">
+  <div *ngIf="selectedwallet === coinwallet[0]" role="tabpanel" class="tab-pane active" id="one">
+
+
+    <div class="card">
+    
+  
+
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>First Name</label>
+          <span style="padding-left: 119px">:&nbsp;{{employee.firstname}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Middle Name</label>
+          <span style="padding-left: 146px">:&nbsp;{{employee.middlename}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Last Name</label>
+          <span style="padding-left: 118px"> :&nbsp;{{employee.lastname}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Email Id</label>
+          <span style="padding-left: 186px">:&nbsp;{{employee.email}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Gender</label>
+          <span style="padding-left: 146px">:&nbsp;{{employee.gender}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Date Of Birth</label>
+          <span style=" padding-left: 145px; "> :&nbsp;{{employee.date_of_birth}} </span>
+
+
+        </div>
+      </div>
+
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label> Contact Number </label>
+          <span style="padding-left: 83px">:&nbsp;{{employee.primary_phone_number}}</span>
+
+
+        </div>
+        <div class="col-sm-6">
+          <label> Alternative Contact Number</label>
+          <span style="
+              padding-left: 46px;
+          ">:&nbsp;{{employee.alternate_phone_number}}</span>
+
+
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Martial Status</label>
+          <span style="padding-left: 98px"> :&nbsp;{{employee.marital_status}}</span>
+        </div>
+
+      </div>
+
+      <!-- currentAddress -->
+      <hr>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <strong>Address </strong>
+        </div>
+      
+        <div class="col-sm-6" style="
+        text-align: end;
+    ">
+          <!-- <button type="submit" data-toggle="modal" data-target="#BasicDetails" class="btn btn-sm btn-primary"
+            class="btn btn-primary"><i class="fa fa-pencil-square-o "></i>
+            &nbsp;Edit&nbsp;</button> -->
+        </div>
+
+      </div>
+      <br>
+      <div class="col-sm-12">
+
+        <div class="col-sm-6">
+          <label>Address Line1</label>
+          <span style="padding-left: 104px"> :&nbsp;{{employee.address_line1}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>Adress Line2</label>
+          <span style="padding-left: 156px"> :&nbsp;{{employee.address_line2}}</span>
+
+        </div>
+      </div>
+
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Country </label>
+          <span style="padding-left: 145px"> :&nbsp;{{employee.country}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>State</label>
+          <span style="padding-left: 210px"> :&nbsp;{{employee.state}}</span>
+
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>City</label>
+          <span style="padding-left: 175px"> :&nbsp; {{employee.city}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>Zipcode</label>
+          <span style="padding-left: 193px"> :&nbsp; {{employee.zip_code}}</span>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div *ngIf="selectedwallet === coinwallet[1]" role="tabpanel" class="tab-pane active" id="two">
+
+
+    <div class="card">
+ 
+
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>Highest Degree:</label>
+          <span style="padding-left: 119px">:&nbsp;{{employee.highest_degree}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Year Rewarded:</label>
+          <span style="padding-left: 146px">:&nbsp;{{employee.year_awarded}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Number Of Years:</label>
+          <span style="padding-left: 118px"> :&nbsp;{{employee.number_of_years}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Institution Name:</label>
+          <span style="padding-left: 137px">:&nbsp;{{employee.institution_name}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Institution Address:</label>
+          <span style="padding-left: 99px">:&nbsp;{{employee.institution_address}} </span>
+        </div>
+
+      </div>
+
+
+
+      <!-- currentAddress -->
+      <hr>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <strong>Certification</strong>
+        </div>
+        <div class="col-sm-6" style="
+        text-align: end;
+    ">
+       
+        </div>
+        <div class="col-sm-6" style="
+        text-align: end;
+    ">
+          <!-- <button type="submit" data-toggle="modal" data-target="#BasicDetails" class="btn btn-sm btn-primary"
+            class="btn btn-primary"><i class="fa fa-pencil-square-o "></i>
+            &nbsp;Edit&nbsp;</button> -->
+        </div>
+      </div>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>Certification Name:</label>
+          <span style="padding-left: 119px">:&nbsp;{{employee.certification_name}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Issued By:</label>
+          <span style="padding-left: 172px">:&nbsp;{{employee.certification_issued_by}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Issued On:</label>
+          <span style="padding-left: 172px;"> :&nbsp;{{employee.certification_issued_on}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Certification Url:</label>
+          <span style="padding-left: 137px">:&nbsp;{{employee.certification_url}}</span>
+        </div>
+      </div>
+    
+
+    </div>
+  </div>
+  <div *ngIf="selectedwallet === coinwallet[2]" role="tabpanel" class="tab-pane active" id="three">
+
+
+    <div class="card">
+
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>Visa Type:</label>
+          <span style="padding-left: 230px">:&nbsp;{{employee.visa_title}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Visa Number:</label>
+          <span style="padding-left: 199px">:&nbsp;{{employee.visa_number}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Visa Start Date:</label>
+          <span style="padding-left: 194px"> :&nbsp;{{employee.visa_start_date}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Visa End Date:</label>
+          <span style="padding-left: 194px">:&nbsp;{{employee.visa_end_date}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Dependent Name:</label>
+          <span style="padding-left: 182px">:&nbsp;{{employee.employee_department}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Address Line1:</label>
+          <span style="padding-left: 194px">:&nbsp;{{employee.address_line1}} </span>
+        </div>
+      </div>
+  
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Address Line2:</label>
+          <span style="padding-left:  200px">:&nbsp;{{employee.address_line2}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>City:</label>
+          <span style="padding-left: 260px">:&nbsp;{{employee.city}} </span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>State :</label>
+          <span style="padding-left: 256px">:&nbsp;{{employee.state}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Zipcode:</label>
+          <span style="padding-left: 234px">:&nbsp;{{employee.zip_code}} </span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Country:</label>
+          <span style="padding-left: 246px">:&nbsp;{{employee.country}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Phone number:</label>
+          <span style="padding-left: 194px">:&nbsp;{{employee.primary_phone_number}} </span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Alternate Phone Number:</label>
+          <span style="padding-left: 139px">:&nbsp;{{employee.alternate_phone_number}} </span>
+        </div>
+        <div class="col-sm-6">
+          <label>Email:</label>
+          <span style="padding-left: 251px">:&nbsp;{{employee.email}} </span>
+        </div>
+      </div>
+    
+
+
+      <hr>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <strong>Green Card </strong>
+        </div>
+     
+
+      </div>
+      <br>
+      <div class="col-sm-12">
+
+        <div class="col-sm-6">
+          <label>Job Title :</label>
+          <span style="padding-left: 240px"> :&nbsp;{{employee.gc_job_title}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>Green Card Salary:</label>
+          <span style="padding-left: 178px"> :&nbsp;{{employee.gc_salary}}</span>
+
+        </div>
+      </div>
+
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Green Card Prevailing Wages </label>
+          <span style="padding-left: 121px"> :&nbsp;{{employee.gc_prevailing_wage}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>Priority Date</label>
+          <span style="padding-left: 221px"> :&nbsp;{{employee.gc_priority_date}}</span>
+
+        </div>
+      </div>
+      <!-- <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>City</label>
+          <span style="padding-left: 278px"> :&nbsp; {{employee.city}}</span>
+
+        </div>
+        <div class="col-sm-6">
+          <label>Zipcode</label>
+          <span style="padding-left: 253px"> :&nbsp; {{employee.zip_code}}</span>
+
+        </div>
+      </div> -->
+
+
+    </div>
+  </div>
+  <div *ngIf="selectedwallet === coinwallet[3]" role="tabpanel" class="tab-pane active" id="four">
+
+
+    <div class="card">
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>Benefit Type:</label>
+          <span style="padding-left: 125px">:&nbsp;{{employee.emp_benefits_type}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Coverage Type:</label>
+          <span style="padding-left: 146px">:&nbsp;{{employee.benefits_coverage_type}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Coverage For:</label>
+          <span style="padding-left: 118px"> :&nbsp;{{employee.benefits_coverage_for}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Start Date:</label>
+          <span style="padding-left: 175px">:&nbsp;{{employee.benefits_start_date}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>End Date:</label>
+          <span style="padding-left: 147px">:&nbsp;{{employee.benefits_end_date}} </span>
+        </div>
+
+      </div>
+
+
+
+      <!-- currentAddress -->
+
+      <hr>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <strong>Salary </strong>
+        </div>
+      
+
+      </div>
+      <div class="col-sm-12" style=" margin-top: 25px;">
+        <div class="col-sm-6">
+          <label>Salary Pay Type:</label>
+          <span style="padding-left: 119px">:&nbsp;{{employee.salary_pay_type}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Pay Amount:</label>
+          <span style="padding-left: 146px">:&nbsp;{{employee.pay_amount}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Payroll Frequency:</label>
+          <span style="padding-left: 105px"> :&nbsp;{{employee.payroll_frequency}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Last Rise Date:</label>
+          <span style="padding-left: 137px">:&nbsp;{{employee.last_rise_date}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>Salary Last Rise Amount:</label>
+          <span style="padding-left: 62px"> :&nbsp;{{employee.salary_last_rise_amount}}</span>
+        </div>
+        <div class="col-sm-6">
+          <label>Salary Start Date:</label>
+          <span style="padding-left: 121px">:&nbsp;{{employee.salary_start_date}}</span>
+        </div>
+      </div>
+      <div class="col-sm-12" style=" padding-top: 11px;">
+        <div class="col-sm-6">
+          <label>salary end date:</label>
+          <span style="padding-left: 118px"> :&nbsp;{{employee.salary_end_date}}</span>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  <div *ngIf="selectedwallet === coinwallet[4]" role="tabpanel" class="tab-pane active" id="five">
+    <div class="card">
+    <div class="col-sm-12" style=" padding-top: 11px;">
+      <div class="col-sm-6">
+        <label>Contact Type</label>
+        <span style="padding-left: 175px"> :&nbsp; {{employee.contact_type}}</span>
+
+      </div>
+      <div class="col-sm-6">
+        <label>Contact First Name</label>
+        <span style="padding-left: 112px"> :&nbsp; {{employee.contact_first_name}}</span>
+
+      </div>
+    </div>
+    <div class="col-sm-12" style=" padding-top: 11px;">
+      <div class="col-sm-6">
+        <label>Contact Last Name</label>
+        <span style="padding-left: 135px"> :&nbsp; {{employee.contact_last_name}}</span>
+
+      </div>
+      <div class="col-sm-6">
+        <label>Mobile</label>
+        <span style="padding-left: 193px"> :&nbsp; {{employee.mobile}}</span>
+
+      </div>
+    </div>
+    <div class="col-sm-12" style=" padding-top: 11px;">
+      <div class="col-sm-6">
+        <label>Alternative Phone Number</label>
+        <span style="padding-left: 90px"> :&nbsp; {{employee.alt_mobile}}</span>
+
+      </div>
+      <div class="col-sm-6">
+        <label>Contact Email</label>
+        <span style="padding-left: 149px"> :&nbsp; {{employee.contact_email}}</span>
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 </div>

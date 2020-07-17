@@ -1,0 +1,74 @@
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+
+        <div class="card-body">
+
+          <div class="page-content fade-in-up">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card card-data-dictionary" (click)="downloadLocationTemplate()">
+                    <div class="card-body uploaddownloadtextalign"style="align-self: center">
+
+                      <h1 class="card-title-dictionary"><i class="fa fa-download fa-2x greyColor downloadIcon"
+                          style="font-size:80px; align-self:center;" aria-hidden="true"></i></h1>
+                      <br>
+                      <h2>
+                        <p class="card-text-dictionary greyColor downloadIcon">Download</p>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+
+                  <div class="card card-data-dictionary" (click)="uploadLocationEvent()">
+                    <div class="card-body uploaddownloadtextalign"style="align-self: center">
+                      <h5 class="card-title-dictionary"><i class="fa fa-upload greyColor uploadIcon"
+                          style="font-size:80px; align-self:center;" aria-hidden="true"></i></h5>
+                      <br>
+                      <h2>
+                        <p class="card-text-dictionary greyColor uploadIcon">Upload</p>
+                      </h2>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div><br>
+              <div class="row">
+                <div *ngIf="hideUploadLocation" style="padding-left:150px">
+                  <div class="card" style="box-shadow: 2px 2px #888888;">
+                    <div class="card-body">
+                      <form [formGroup]="uploadLocationInExcel">
+                        <input type="file" formControlName="excelFile" id="uploadLocFile" (change)="fileChange($event)"
+                          placeholder="Upload file" accept=".xls,.xlsx">
+                        <div *ngIf="uploadLocationInExcel.controls['excelFile'].hasError('pattern')"
+                          class="failed-validation">
+                          Invalid File Format(accepts only .xls and .xlsx)
+                        </div>
+                        <button type="button" class="btn btn-default" (click)="uploadLocationFiles()"
+                          [disabled]="!uploadLocationInExcel.valid">
+                          Upload
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12" style="
+text-align: end;
+">
+<button type="button" class="btn btn-secondary"  (click)="back()">&nbsp;Back</button> &nbsp;
+</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

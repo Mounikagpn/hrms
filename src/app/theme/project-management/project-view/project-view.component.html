@@ -1,0 +1,1116 @@
+<!--<ngx-spinner [fullScreen]="false" type="ball-clip-rotate-multiple" size="medium">
+</ngx-spinner>-->
+<mat-tab-group [selectedIndex]="selectedIndex">
+    <mat-tab label="PROJECT OVERVIEW" style="
+    font-weight: bold;
+">
+        <div class="col-sm-12 col-md-12 col-lg-12 detailscardpadding" style="
+        padding-top: 2%;
+    ">
+            <div class="card    ">
+                <div class="card-body">
+                    <h5 class="card-title" id="heading">DENTAL COUNCIL OF INDIA</h5>
+                    <p class="card-text"></p>
+                    <div style=" padding-left: 72%;">
+                        <button  type="button" class="btn btn-success"
+                            id="taskCreate" (click)="updateProject()">Update
+                            Project</button> &nbsp;
+                        <button  type="button" class="btn btn-danger"
+                            id="taskCreate" (click)="DeleteProject()">Delete
+                            Project</button>
+                    </div>
+                    <div class="col-sm-12" style="padding-top: 33px;">
+                        <div class="col-sm-3">
+                            <div class="card pcard">
+                                <p style=" margin-left: 14px; margin-top: 9px; ">HOURS </p>
+                                <h3 style=" margin-left: 15px;color: #22345e;margin-top: -4px;">
+                                    <b>88.49/66 </b>
+                                </h3>
+                                <p style="margin-left: 17px;margin-top: -6px;">-22.49 Remaining hours</p>
+
+                            </div>
+                            <progress value="40" max="100"
+                                style=" margin-top: -4px; padding: 10px;width: -webkit-fill-available;"></progress>
+                        </div>
+                        <div class="col-sm-3" style="
+                        cursor: pointer;
+                    ">
+                            <div class="card pcard" (click)="taskMove()">
+                                <p style=" margin-left: 14px; margin-top: 9px; "> TASKS</p>
+                                <h3 style="margin-left: 15px;color: #ffc107;margin-top: -4px;">
+                                    <b>0/10 </b>
+                                </h3>
+                                <p style="margin-left: 17px;margin-top: -6px; ">10 penddingTask Pending Tasks </p>
+
+                            </div>
+                            <div>
+                                <progress value="30" max="100"
+                                    style=" margin-top: -4px; padding: 10px;width: -webkit-fill-available;"></progress>
+                            </div>
+                        </div>
+                        <div class="col-sm-3" style="
+                        cursor: pointer;
+                    ">
+                            <div class="card pcard" (click)="sprintMove()">
+                                <p style=" margin-left: 14px; margin-top: 9px; "> SPRINTS</p>
+                                <h3 style=" margin-left: 15px;color: #FF4500;margin-top: -4px;">
+                                    <b>0/1</b></h3>
+                                <p style="margin-left: 17px;margin-top: -6px;">1 Pending Sprints </p>
+
+                            </div>
+                            <progress value="20" max="100"
+                                style="   margin-top: -4px; padding: 10px;width: -webkit-fill-available;"></progress>
+                        </div>
+                        <div class="col-sm-3" style="
+                        cursor: pointer;
+                    ">
+                            <div class="card pcard" (click)="bugMove()">
+                                <p style=" margin-left: 14px; margin-top: 9px; "> BUGS</p>
+                                <h3 style=" margin-left: 15px;color: #28a745;margin-top: -4px;">
+                                    <b>0/0 </b>
+                                </h3>
+                                <p style="margin-left: 17px;margin-top: -6px;">0 Pending Bugs </p>
+                            </div>
+                            <progress value="10" max="100"
+                                style="     margin-top: -4px; padding: 10px;width: -webkit-fill-available;"></progress>
+                        </div>
+                    </div>
+                    <div class="col-sm-12" style="padding-top: 36px;  ">
+                        <div class="col-sm-3">
+                            <h6 id="names">Project Manager</h6>
+                            <p><i class="fa fa-user"
+                                    aria-hidden="true"></i>&nbsp;&nbsp;Venkata&nbsp; Giri Babu&nbsp;Kilari
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h6 id="names">Contact Number</h6>
+                            <p><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;9948843686</p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h6 id="names">Project Start Date</h6>
+                            <p><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;July 8,2020
+                            </p>
+                        </div>
+                        <div class="col-sm-3">
+                            <h6 id="names">Project End Date</h6>
+                            <p><i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;&nbsp;</p>
+                        </div>
+
+
+                    </div>
+                    <!-- <div class="col-sm-12">
+                        <div class="card pcard">
+
+
+
+                        </div>
+                    </div> -->
+                    <div class="col-sm-12" style="  padding-top: 22px;">
+                        <h5 style="color: #22345e;margin-left: 14px; ">Client Contacts :</h5>
+                        <div class="col-sm-4" >
+                            <div class="card pcards">
+
+                                <h3 style="margin-top: 25px;"><i class="fa fa-user" aria-hidden="true" style="
+                                    margin-left: 14px;
+                                    font-size: 27px;
+                                "></i>
+                                    <p style=" margin-left: 31px; margin-top: -30px;">
+                                        &nbsp;Ambika&nbsp;Prasad
+                                    </p>
+                                </h3>
+                                <!-- <p style="margin-left: 56px;margin-top: -25px;">{{project.coOrdinatorFirstName}} </p>
+                              -->
+                                <div class="panel-footer">
+                                    <span>Email:&nbsp;<a
+                                            style=" color: cornflowerblue;">ambika.mohapatra@prutech.com</a></span>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12" style="
+                    padding-top: 36px;
+                ">
+                        <h4 style="color: #22345e;margin-left: 14px; ">Client Address :</h4>
+                        <h5 style=" color: #22345e;margin-left: 14px; margin-top: 1px;">DENTAL COUNCIL OF INDIA </h5>
+                        <div  style="margin-left: 14px;margin-top: -9px;">
+                            <span></span>
+                            <p> Hyderabad&nbsp;&nbsp;Telangana</p>
+                            <p style=" margin-top: -14px;"> India &nbsp;&nbsp;088830</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="SPRINTS" style="    font-weight: bold;padding-top: 16px;margin-left: 7px;">
+        <h5 class="card-title" id="heading" style="margin-top: 19px;margin-left: 10px;
+    ">DENTAL COUNCIL OF INDIA</h5>
+
+        <div class="container-fluid" style="  margin-top: 18px;">
+            <!-- <swiper [config]="config"> -->
+                <div class="swiper-wrapper" style="padding-left: 3%">
+                    <div class="card text-center col-lg-2" style="
+                        margin-left: 70px;">
+                            <h3  style="text-align: center;padding-top:7%"><b>10 </b></h3>
+                            <p style="text-align: center">Total Tasks</p>
+  
+                    </div>
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3  style="text-align: center;padding-top:7%"><b>0 </b></h3>
+                        <p style="text-align: center">New Tasks</p>
+                
+                    </div>
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3  style="text-align: center;padding-top:7%"><b>5 </b></h3>
+                        <p style="text-align: center">Inprogress Tasks</p>
+                
+                    </div>
+                    
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3 style="text-align: center;padding-top:7%"><b><i style="cursor: pointer;"
+                             data-toggle="modal" data-target="#modalCart"
+                            class="fa fa-plus-circle" aria-hidden="true"></i>
+                    </b></h3>
+                <p style="text-align: center">ADD SPRINT</p>
+                
+                    </div>
+                </div>
+                       <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div>
+            
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </swiper> -->
+
+        </div>
+        <!-- <div class="float-rigth">
+                <i class="glyphicon glyphicon-search" id="SearchIcons"></i><input id="search" type="text"
+                [(ngModel)]="termTask">
+        </div> -->
+        <!-- <div class="container-fluid" style="  margin-top: 31px;">
+            <swiper [config]="config">
+                <div class="swiper-wrapper" style="padding-left: 3%">
+                    <div class="swiper-slide swipe" *ngFor="let x of listOfSprints">
+                        <div class="card pcard">
+                            <h3 [style.color]='x.color' style="text-align: center;padding-top:7%"><b>{{x.value}}
+                                </b></h3>
+                            <p style="text-align: center">{{x.key}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </swiper>
+
+        </div> -->
+
+        
+        <div>
+            <!-- <button 
+        type="button" class="btn btn-success float-right"  >Add Sprints</button> -->
+
+        </div>
+
+        <div class="container">
+
+            <div class="ibox gridTopMargin"  style=" overflow-x: hidden !important;">
+                <!-- <div class="ibox-head" style="font-weight: 900;">
+                        <td>Sprint Number{{sprin}}{{x.sprintName}}</td>
+                        <button (click)="ShowTable(x.sprintName)">View</button>
+                    </div> -->
+
+                <mat-accordion>
+                    <mat-expansion-panel style="margin-top: 2%;">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+
+                                <span> Sprint &nbsp;
+                                    1&nbsp;&nbsp;</span>
+                                <span style="
+                               margin-left: 48px;
+                           ">Start Date: &nbsp; 16-7-2020&nbsp;&nbsp; </span>
+                                <span style="
+                               margin-left: 48px;
+                           ">End Date: &nbsp; 27-9-2020&nbsp;&nbsp;</span>
+                                <span style="
+                               margin-left: 48px;
+                           "> Status: ACTIVE&nbsp; &nbsp;&nbsp;</span>
+                            <span style="
+                            margin-left: 48px;
+                        "> BackLogs: Test&nbsp; &nbsp;&nbsp;</span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+
+
+                        <table id="tree-table" class="table" style="border: 1px solid #dee2e6;">
+                            <thead>
+                                <th width="19%">TASK NAME</th>
+                                <th width="13%"> START DATE</th>
+                                <th width="12%">END DATE</th>
+                                <th width="19%">PROGRESS</th>
+                                <!-- <th>TEAM</th> -->
+                                <th>STATUS</th>
+                                <th
+                                   >
+                                    ACTION</th>
+                            </thead>
+                            <tbody>
+                                <tr class="accordion-toggle" (click)="sprintClick(x.sprintName)"
+                                    >
+                                    <td width="19%"> projectTaskName  </td>
+                                    <td width="13%">actualStartTime</td>
+                                    <td width="12%">actualEndTime</td>
+                                    <td width="19%"><progress value="50" max="100"></progress></td>
+                                    <!-- <td>
+                                                <img src="../../../../../assets/img/user1.jpg" class="img-circle"><img
+                                                    src="../../../../../assets/img/user2.jpg" class="img-circle">
+                                                <img src="../../../../../assets/img/user3.jpg" class="img-circle"><span
+                                                    class="glyphicon glyphicon-plus"></span>
+                                            </td> -->
+                                    <td>
+                                        <div class="statusCard" [ngStyle]="{'color':changeSprintStatusColor(INPROGRESS)}">
+                                            INPROGRESS</div>
+                                    </td>
+                                    <td>
+                                         <select class="custom-select" 
+                                            (change)="onSprintChangeforBacklog($event.target.value)"
+                                            (click)="taskList(y)" id="sprintlistforTasks">
+                                            <option selected value='SprintValue' disabled>Select Sprint *</option>
+                                            <option >
+                                                1
+                                            </option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </mat-expansion-panel>
+
+                </mat-accordion>
+
+
+            </div>
+
+            <div class="modal fade" id="modalCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                data-backdrop="false" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document" style="padding-top: 121px; padding-left: 71px;">
+                    <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header" style=" background-color: #111b2f;">
+                            <h4 class="modal-title" id="myModalLabel" style="color: white;">Sprint Create</h4>
+                            <button type="button" class="close" data-dismiss="modal" style="color: white;"
+                                aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+
+                        <!--Body-->
+                        <div class="modal-body">
+
+                            <form [formGroup]="sprintForm">
+                                <div class="col-sm-12">
+                                    <div class="col-sm-6">
+                                        <label>Sprint Number * :</label>
+                                        <input type="text" class="form-control"
+                                            (keypress)="this.global.keyPress($event)" placeholder=""
+                                            formControlName="sprintNumber" maxlength=2 readonly>
+                                        <span
+                                            *ngIf="sprintForm.controls['sprintNumber'].hasError('required') && sprintForm.controls['sprintNumber'].touched"
+                                            style="color:red" class="failed.validation">
+                                            {{_stringResourceErrors.FIELD_REQUIRED}}
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label>Start Date *:</label>
+                                        <!-- <input type="date" class="form-control" placeholder="Start Date" formControlName="startDate"> -->
+                                        <input type="text" placeholder="MM\DD\YYYY" class="form-control" bsDatepicker
+                                            [bsConfig]="datePickerConfg" formControlName="startDate">
+                                        <span
+                                            *ngIf="sprintForm.controls['startDate'].hasError('required') && sprintForm.controls['startDate'].touched"
+                                            style="color:red" class="failed.validation">
+                                            {{_stringResourceErrors.FIELD_REQUIRED}}
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <div class="col-sm-6">
+                                        <label>Sprint Duration * :</label>
+                                        <input type="text" class="form-control"
+                                            (keypress)="this.global.keyPress($event)" placeholder="Sprint Periods "
+                                            formControlName="SprintPeriods" maxlength="2">
+                                        <span
+                                            *ngIf="sprintForm.controls['SprintPeriods'].hasError('required') && sprintForm.controls['SprintPeriods'].touched"
+                                            style="color:red" class="failed.validation">
+                                            {{_stringResourceErrors.FIELD_REQUIRED}}
+                                        </span>
+                                    </div>
+
+                                </div>
+                                <!-- [disabled]="projectmanagerForm.valid" -->
+                                <!-- <div class="float-right" >
+
+                        <button type="button"  class="btn btn-info" [disabled]="!sprintForm.valid" (click)="onSubmit()">&nbsp;Submit</button>
+
+                        <button type="button" class="btn btn-info" data-toggle="modal"
+                          data-target="#updateLocationModal" [routerLink]="['/project-management/manage-project']">&nbsp;Cancel</button>
+
+
+                      </div> -->
+
+                                <!--Footer-->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                    <button class="btn btn-primary" [disabled]="!sprintForm.valid"
+                                        (click)="onSubmitForSprint()" data-dismiss="modal">Submit</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </mat-tab>
+    <mat-tab label="TASKS" style="    font-weight: bold;">
+        <h5 class="card-title" id="heading" style="padding-top: 16px;margin-left: 10px;
+    ">DCI COLLEGE MASTER</h5>
+        <div class="page-content fade-in-up">
+
+            <div class="container-fluid">
+                <!-- <swiper [config]="config"> -->
+                <div class="swiper-wrapper" style="padding-left: 3%">
+                    <div class="card text-center col-lg-2" style="
+                        margin-left: 70px;">
+                            <h3  style="text-align: center;padding-top:7%"><b>10 </b></h3>
+                            <p style="text-align: center">Total Tasks</p>
+  
+                    </div>
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3  style="text-align: center;padding-top:7%"><b>0 </b></h3>
+                        <p style="text-align: center">New Tasks</p>
+                
+                    </div>
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3  style="text-align: center;padding-top:7%"><b>5 </b></h3>
+                        <p style="text-align: center">Inprogress Tasks</p>
+                
+                    </div>
+                    <div class="card text-center col-lg-2" style="
+                    margin-left: 70px;">
+                        <h3  style="text-align: center;padding-top:7%"><b>0 </b></h3>
+                        <p style="text-align: center">Completed Tasks</p>
+                
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <!-- <div class="swiper-pagination"></div>
+                        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </swiper> -->
+
+            </div>
+        </div>
+            <div class="ibox  gridTopMargin">
+                <div class="col-sm-3" style="padding-top: 9px;">
+                <form [formGroup]="taskassign">
+
+                </form>
+            </div>
+            <div class="container" style="padding-top: 9px;">
+                <div class="float-right ">
+
+                    <input style="margin-right: 4px;" id="search" type="text" [(ngModel)]="termTask" placeholder="Search....">
+                       <button type="button" class="btn btn-info" id="taskCreate" (click)="taskCreationRoute()"
+                           
+                           [disabled]="taskcreationbtn" data-toggle="modal" style="margin-right: 1px !important;"
+                           data-target="#deleteLocationModal" [routerLink]="['/project-management/task-creation']">Upload
+                           Tasks</button>
+                       <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal"  style="margin-left: 5px!important;">Add
+                           Task</button> &nbsp;
+                       <button type="button" class="btn btn-secondary" (click)="downloadTaskReports()">Download Task</button>
+   
+                   </div>
+
+                   <div style="padding-top:48px">
+                    <table class="table table-bordered" cellspacing="0" width="100%">
+                        <thead>
+                            <tr style="background-color: whitesmoke;">
+                                <th>Task Name</th>
+                                <th>Project Name</th>
+                                <th>Estimated Hours</th>
+
+                                <th>Status</th>
+                                <th>Actions</th>
+                                <!-- <th
+                                    *ngIf="this.employeePrivilege.manageProject || this.employeePrivilege.manageSprints">
+                                    Change Sprint</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MODIFICATIONS ON MONITORCELLEXECUTIVESCREENS	</td>
+                                <td>DCI COLLEGE MASTER</td>
+                                <td>8</td>
+
+
+
+                                <!-- <td> <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+                  {{project.progress}}  [disabled]="disableCreatBug"
+                </div></td>[ngStyle]="{'color':changeStatusColor(project.status)}" -->
+                                <!-- (click)="edit(task)" -->
+                                <td style="padding-left: 60px">
+                                    <div class="statusCard" style="border: 1px solid"
+                                        >
+                                        PENDING FOR REVIEW</div>
+                                </td>
+                                <td>
+
+                                    <div style="padding-left: 18px">
+                                        <span>
+                                            <i matTooltip="View Task Detail" class="fa fa-eye fa-lg"
+                                                (click)="viewTask(task)" aria-hidden="true"></i> &nbsp;
+                                        </span>
+                                        <span
+                                            >
+                                            <i class="fa fa-pencil-square-o fa-lg" matTooltip="Edit Task "
+                                                (click)="getTaskByID(task)" aria-hidden="true"></i> &nbsp;
+                                        </span>
+                                        <span
+                                            >
+                                            <i class="fa fa-trash fa-lg" (click)="delete(task)" matTooltip="Delete Task"
+                                                aria-hidden="true"></i>
+                                        </span> &nbsp;
+                                        
+                                    </div>
+
+                                </td>
+                                <!-- <td
+                                    *ngIf="this.employeePrivilege.manageProject ||  this.employeePrivilege.manageSprints">
+                                    <div class="input-group mb-3"
+                                        *ngIf="this.employeePrivilege.manageProject  ||  this.employeePrivilege.manageSprints">
+                                        <select class="custom-select"
+                                            (change)="onSprintChangeforTasks($event.target.value)"
+                                            (click)="projectTaskListId(task)" formControlName="taskSprint"
+                                            id="sprintlistforTasks">
+                                            <option selected value="Select Sprint">Select Sprint *</option>
+                                            <option *ngFor="let newSprintlist of sprintlistforTasks"
+                                                [value]="newSprintlist.projectSprintId">
+                                                {{newSprintlist.sprintNumber}}
+                                            </option>
+                                        </select>
+
+                                    </div>
+                                </td> -->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="float-right" >
+                        <button (click)="onBtPrevious()" class="btn btn-outline-primary"
+                            [disabled]="disablePreviousButton"><i class="fa fa-angle-left"
+                                aria-hidden="true"></i></button>&nbsp;<span
+                            class="pageCountFount">1/1</span>&nbsp;
+                        <button (click)="onBtNext()" class="btn btn-outline-primary" [disabled]="disableNextButton"><i
+                                class="fa fa-angle-right" aria-hidden="true"></i></button><br><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-lg" role="document" style="padding-top: 121px;">
+                    <div class="modal-content">
+                        <!--Header-->
+                        <div class="modal-header" style=" background-color: #111b2f;">
+                            <h4 class="modal-title" id="myModalLabel" style="color: white;">Task Create</h4>
+                            <button type="button" class="close" (click)="resetForm()" data-dismiss="modal"
+                                style="color: white;" aria-label="Close">
+                                <a aria-hidden="true">×</a>
+                            </button>
+                        </div>
+
+                        <!--Body (ngModelChange)="setValue($event)"-->
+                        <div class="modal-body">
+                            <mat-horizontal-stepper linear #stepper>
+                                <mat-step [stepControl]="taskForm">
+                                    <form [formGroup]="taskForm">
+                                        <div class="col-sm-12" >
+
+                                            <label>Task Name * :</label>
+                                            <input type="text" class="form-control"
+                                                (keypress)="this.global.keyPresss($event)"
+                                                placeholder=""
+                                                formControlName="projectTaskName">
+                                            <span
+                                                *ngIf="taskForm.controls['projectTaskName'].hasError('required') && taskForm.controls['projectTaskName'].touched"
+                                                style="color:red" class="failed.validation">
+                                                
+                                            </span>
+                                            <span *ngIf="taskForm.controls['projectTaskName'].hasError('pattern')"
+                                                class="failed-validation">
+                                                
+                                            </span>
+                                        </div>
+                                        <div class="col-sm-12" >
+
+                                            <label>Estimated Hours * :</label>
+
+                                            <input type="text" class="form-control" placeholder="Estimated Hours"
+                                                (keypress)="this.global.numberPresswithDot($event)"
+                                                formControlName="estimatedTimeHours" maxlength="4">
+
+
+                                        </div>
+
+                                        <div class="float-right" style="padding-top: 3px">
+
+                                            <button *ngIf="Edit" (click)="onTaskSubmit()" (change)="showHideButton()"
+                                                class="btn btn-primary" [disabled]="!taskForm.valid"
+                                                matStepperNext>Next</button>
+
+                                            <button *ngIf="!Edit" class="btn btn-primary" matStepperNext>Next</button>
+                                            <!-- <button type="button" mat-button matStepperNext class="btn btn-outline-info" [disabled]="!taskForm.valid"
+                                                                (click)="onTaskSubmit()" *ngIf="Edit" >&nbsp;Submit</button> -->
+                                            <button type="button" class="btn btn-success" matStepperNext
+                                                [disabled]="!taskForm.valid" (click)="update()"
+                                                >&nbsp;Update</button>
+                                        </div>
+                                    </form>
+                                </mat-step>
+                                <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+
+                                    <form [formGroup]="uploadLocationInExcel">
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-6">
+
+                                                <label>
+                                                    Analysis:</label>
+                                                <input (change)="fileChange($event)" formControlName="excelFile"
+                                                    value="ANALYSIS" type="file" />
+                                                <!-- <div *ngIf="uploadLocationInExcel.controls['excelFile'].hasError('pattern')"
+                                                    class="failed-validation">
+                                                    Invalid File Format(accepts only .xls and .xlsx and .png and .jpg
+                                                    and .docx)
+                                                </div> -->
+
+                                            </div>
+                                            <div class="col-sm-6">
+
+                                                <label>
+                                                    Test Cases:</label>
+                                                <input (change)="fileChange($event)" type="file" value="TEST_CASES" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-6">
+
+                                                <label>
+                                                    Technical Design:</label>
+                                                <input (change)="fileChange($event)" type="file"
+                                                    value="TECHNICAL_DESIGN" />
+                                            </div>
+
+                                            <div class="col-sm-6">
+
+                                                <label>
+                                                    Wire Frame:</label>
+                                                <input (change)="fileChange($event)" type="file" value="WIRE_FRAME" />
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <div class="col-sm-6">
+
+                                                <label>
+                                                    UI Design:</label>
+                                                <input (change)="fileChange($event)" type="file" value="UI_DESIGN" />
+                                            </div>
+
+
+                                        </div>
+                                    </form>
+
+                                    <div style="
+                                    text-align: end;
+                                ">
+                                        <button (click)="uploadAllAttachments()" matStepperPrevious
+                                            class="btn btn-primary" data-dismiss="modal">Finish</button>
+                                    </div>
+                                    <!-- <p>Note:Valid only Word,Pdf,Excel,Image. With MaxSize(2mb)</p> -->
+                                </mat-step>
+
+                            </mat-horizontal-stepper>
+                            <!-- <div style=" text-align: end;">
+                                <button type="button" class="btn btn-outline-secondary" (click)="cancelTaskForm()"
+                                    data-dismiss="modal">&nbsp;Cancel</button> &nbsp;
+                            </div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        
+    </mat-tab>
+    <mat-tab label="TASK REVIEW"></mat-tab>
+    <mat-tab label="BUGS" style="    font-weight: bold;">
+
+        <h5 class="card-title" id="heading" style="
+        margin-left: 10px;
+        padding-top: 2%;
+    ">DCI COLLEGE MASTER</h5>
+
+        <div class="container-fluid">
+            <!-- <swiper [config]="config"> -->
+            <div class="swiper-wrapper" style="padding-left: 3%;padding-top: 8px;">
+                <div class="swiper-slide swipe" style="width: 16%;margin-right: 25px;">
+                    <div class="card pcard">
+                        <h3  style="text-align: center;padding-top:7%"><b>0
+                            </b></h3>
+                        <p style="text-align: center">Total Bugs</p>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Add Pagination -->
+            <!-- <div class="swiper-pagination"></div>
+                        
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </swiper> -->
+
+        </div>
+        <!-- My Bugs -->
+        <div class="tab-content">
+            <mat-tab-group>
+                <mat-tab label="Bugs I Am Working On" >
+                    <div style=" padding-top: 31px;">
+                        <div class="ibox  gridTopMargin">
+                            <div class="ibox-head">
+                                <div class="ibox-title" style="  color: #22345e;   ">Bugs I Am Working On </div>
+                                <div class=" float-right ">
+
+                                    <button type="button" class="btn btn-success"
+                                        (click)="downloadReports()">Download</button>
+                                <input id="search" type="text" [(ngModel)]="termIam" placeholder="Search...">
+                                </div>
+                            </div>
+                            <div class="ibox-body">
+                                <table class="table table-bordered" id="responsive-table">
+                                    <thead>
+                                        <tr style="  background-color: whitesmoke;">
+                                            <th scope="col">Bug Number</th>
+                                            <th scope="col">Bug Title</th>
+                                            <th scope="col">Project Name</th>
+                                            <th scope="col">Task Name</th>
+                                            <th scope="col">Created On</th>
+                                            <th scope="col">Tester</th>
+                                            <th scope="col">Enviroment</th>
+                                            <th scope="col">Priority</th>
+                                            <th scope="col">Severity</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody style="
+                                    cursor: pointer;
+                                ">
+                                        <tr  (click)="selectRow()"
+                                            id="">
+                                            <!-- <td scope="row">1</td> -->
+                                            <td>1</td>
+                                            <td>bugTitle</td>
+
+                                            <td>project.projectName</td>
+                                            <td>projectTaskName</td>
+                                            <td>createdDate</td>
+                                            <td>firstNamelastName</td>
+                                            <td>environment</td>
+                                            <td style="padding-left: 34px;"
+                                                ><a>
+                                                    priorityTypes</a>
+                                            </td>
+                                            <td style="padding-left: 34px;"
+                                                ><a>
+                                                    severityTypes</a>
+                                            </td>
+                                            <td style="padding-left: 18px;"
+                                                >
+                                                <a>
+                                                    status</a>
+                                            </td>
+                                            <td><span>
+                                                    <i class="fa fa-pencil-square-o fa-lg" matTooltip="Edit Bug "
+                                                        (click)="editBug()" aria-hidden="true"></i> &nbsp;
+                                                </span></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div id="margin" style="text-align: end;" *ngIf="bugdeveloper">
+                                    <button (click)="onBtPreviousDeveloper()" style=" margin-left: -72px;"
+                                        class="btn btn-outline-primary" [disabled]="disablePreviousButton"><i
+                                            class="fa fa-angle-left" aria-hidden="true"></i></button> &nbsp;
+                                    <span
+                                        class="pageCountFount">1/1</span>&nbsp;
+                                    <button (click)="onBtNextDeveloper()" class="btn btn-outline-primary"
+                                        [disabled]="disableNextButton"><i class="fa fa-angle-right"
+                                            aria-hidden="true"></i></button><br><br>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Bugs Opened By Me" >
+                    <div style=" padding-top: 31px;" >
+                        <div class="ibox  gridTopMargin">
+                            <div class="ibox-head">
+                                <div class="ibox-title" style="  color: #22345e;   ">Bugs Opened By Me</div>
+                                <div class=" float-right ">
+                                    <button type="button" class="btn btn-success"
+                                        (click)="downloadReports()">Download</button>
+                        <input id="search" placeholder="Search..."
+                                        type="text" [(ngModel)]="termTester">
+
+
+
+                                </div>
+                            </div>
+                            <div class="ibox-body">
+                                <table class="table table-bordered" id="responsive-table">
+                                    <thead>
+                                        <tr style="  background-color: whitesmoke;">
+                                            <th scope="col">Bug Number</th>
+                                            <th scope="col">Bug Title</th>
+                                            <th scope="col">Project Name</th>
+                                            <th scope="col">Task Name</th>
+                                            <th scope="col">Created On</th>
+                                            <th scope="col">Developer</th>
+                                            <th scope="col">Enviroment</th>
+                                            <th scope="col">Priority</th>
+                                            <th scope="col">Severity</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody style="
+                                    cursor: pointer;
+                                ">
+
+                                        <tr 
+                                            (click)="selectRow()" id="">
+                                            <td>bugNumber</td>
+                                            <td>bugTitle</td>
+                                            <td>projectName</td>
+                                            <td>projectTaskName</td>
+                                            <td>createdDate</td>
+                                            <td>firstName
+                                                lastName/td>
+                                            <td>environment</td>
+                                            <td style="padding-left: 34px;"
+                                                ><a>
+                                                    priorityTypes</a>
+                                            </td>
+                                            <td style="padding-left: 34px;"
+                                                ><a>
+                                                    severityTypes</a>
+                                            </td>
+                                            <td style="padding-left: 18px;"
+                                                >
+                                                <a>
+                                                    status</a>
+                                            </td>
+                                            <td><span>
+                                                    <i class="fa fa-pencil-square-o fa-lg" matTooltip="Edit Bug "
+                                                        (click)="editBug(bug)" aria-hidden="true"></i> &nbsp;
+                                                </span></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div id="margin" style="text-align: end;" *ngIf="bugTester">
+                                    <button (click)="onBtPreviousTester()" style=" margin-left: -72px;"
+                                        class="btn btn-outline-primary" [disabled]="disablePreviousButton"><i
+                                            class="fa fa-angle-left" aria-hidden="true"></i></button> &nbsp;
+                                    <span class="pageCountFount">1/1</span>&nbsp;
+                                    <button (click)="onBtNextTester()" class="btn btn-outline-primary"
+                                        [disabled]="disableNextButton"><i class="fa fa-angle-right"
+                                            aria-hidden="true"></i></button><br><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+                <mat-tab label="Project Bugs">
+                    <div style=" padding-top: 31px;">
+                        <div class="ibox  gridTopMargin">
+                            <div class="ibox-head">
+                                <div class="ibox-title" style="  color: #22345e;   ">Project Bugs</div>
+                                <div class=" float-right ">
+
+                                    <button type="button"
+                                        class="btn btn-success" (click)="downloadReportsForManager()">Download</button>
+                                  <input id="search" placeholder="Search...."
+                                        type="text" [(ngModel)]="term">
+
+
+
+                                </div>
+                            </div>
+                            <div class="ibox-body">
+                                <table class="table table-bordered" id="responsive-table">
+
+                                    <thead>
+                                        <tr style="  background-color: whitesmoke;">
+                                            <th scope="col">Bug Number</th>
+                                            <th scope="col">Bug Title</th>
+                                            <th scope="col">Project Name</th>
+                                            <th scope="col">Task Name</th>
+                                            <th scope="col">Created On</th>
+                                            <th scope="col">Developer</th>
+                                            <th scope="col">Tester</th>
+                                            <th scope="col">Enviroment</th>
+                                            <th scope="col">Priority</th>
+                                            <th scope="col">Severity</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody style="
+                                    cursor: pointer;
+                                ">
+                                        <tr 
+                                            (click)="selectRow()" id="">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td> </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="padding-left: 34px;"><a></a>
+                                            </td>
+                                            <td style="padding-left: 34px;"
+                                                ><a></a>
+                                            </td>
+                                            <td style="padding-left: 18px;"
+                                                >
+                                                <a>
+                                                    </a>
+                                            </td>
+                                            <td><span>
+                                                    <i class="fa fa-pencil-square-o fa-lg" matTooltip="Edit Bug "
+                                                        (click)="editBug(bug)" aria-hidden="true"></i> &nbsp;
+                                                </span></td>
+
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div id="margin" style="text-align: end;" >
+                                <button (click)="onBtPreviousManagers()" style=" margin-left:-72px"
+                                    class="btn btn-outline-primary" [disabled]="disablePreviousButton"><i
+                                        class="fa fa-angle-left" aria-hidden="true"></i></button> &nbsp;
+                                <span class="pageCountFount">1/1</span>&nbsp;
+                                <button (click)="onBtNextManaher()" class="btn btn-outline-primary"
+                                    [disabled]="disableNextButton"><i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></button><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
+
+
+
+            <!-- Bug Opened By Me -->
+
+            <!-- *ngIf="employeePrivilege.ManageBugsForManager || this.employeePrivilege.manageProject" *ngIf="employeePrivilege.ManageBugsForManager" -->
+
+
+        </div>
+
+    </mat-tab>
+    <mat-tab label="RESOURCES" style="    font-weight: bold;" >
+
+
+
+        <div class="card " style="
+            padding-top: 9px;
+        ">
+
+
+
+            <div class="card-body">
+                <div class="col-sm-12 col-xl-12 col-md-12">
+                    <div class="col-sm-5 col-xl-5 col-md-5">
+                        <h5 class="card-title" id="heading" style="
+                                        padding-top: 16px;
+                                        margin-left: 10px;
+                                    ">DCI COLLEGE MASTER</h5>
+                    </div>
+                    <div class="col-sm-3 col-xl-3 col-md-3">
+                        <h3 style="float:right;margin-top:8px;font-size:15px;">Assign Employee</h3>
+                    </div>
+                    <div class="col-sm-4 col-xl-4 col-md-4">
+
+                        <span class="glyphicon glyphicon-search form-control-feedback" style="    margin-top: 5px;
+                                            right: 33px;
+                                        "> </span>
+                        <ng-autocomplete style=" " [data]="countries" [searchKeyword]="keyword"
+                            placeHolder="Enter employee name/id" (selected)='selectEvent($event)'
+                            (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)'
+                            historyIdentifier="countries" [itemTemplate]="itemTemplate"
+                            [notFoundTemplate]="notFoundTemplate">
+                        </ng-autocomplete>
+
+                        <ng-template #itemTemplate let-item>
+                            <img style="
+                                                margin-left: 10px;
+                                                margin-top: 14px;
+                                            " src="./assets/images/admin-avatar.png" height="45">
+                            <a style="
+                
+                
+                                          margin-left: 54px;
+                                          margin-top: -56px;
+                
+                
+                                        " [innerHTML]="item.name"></a>
+                            <div>
+                                <ul style="display: flex;padding-left: 66px;margin-top: -13px;">
+                                    <li [innerHTML]="item.employeeName">&nbsp;</li>
+                                    <li style="margin-left:5px;" [innerHTML]="item.LastName"></li>
+
+                                </ul>
+                            </div>
+                            <HR>
+                        </ng-template>
+
+                        <ng-template #notFoundTemplate let-notFound>
+                            <div [innerHTML]="notFound"></div>
+                        </ng-template>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-12 col-xl-12 col-md-12">
+                    <div class="col-sm-4 col-xl-4 col-md-4" style="
+                padding-top: 24px;" >
+
+                        <div class="card pcard">
+
+
+                            <button (click)="changeButtons($event)" (click)="removeEmployeeFromProject(x)"
+                                class="btn btn-outline-danger" matTooltip="UnAssign Employee"
+                                style="padding: -11px;max-width: 32px;/* margin-left: 264px; *//* margin-top: 5px; *//* height: 26px; */float: right;margin-left: auto; ">
+                                <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+
+                            <div class="col-sm-12 col-xl-12 col-md-12">
+                                <div class="col-sm-2 col-xl-2 col-md-2" style="
+                                margin-top: -15px;
+                            ">
+
+                                    <img src="./assets/images/admin-avatar.png"
+                                        style="width:60px; height:60px;margin-left:-20px; ">
+                                </div>
+                                <div class="col-sm-10 col-xl-10 col-md-10">
+                                    <p class="empdetails">
+                                        <span class="labemp">Name: </span><span class="empdetails">
+                                            Sahithya  Kodavatikanti</span></p>
+
+
+                                    <p class="empdetails"> <span class="labemp">Employee Id: </span><span
+                                            class="empdetails"><a>520162158</a></span></p>
+                                    <p class="empdetails"> <span class="labemp"> Email:</span><span
+                                            class="empdetails"><a>sahithya.kodavatikanti@prutech.com</a></span></p>
+                                    <!-- <p class="empdetails">  <span class="labemp">Department: </span><span class="empdetails"><a >{{x.employeeNumber}}</a></span></p>
+                        <p class="empdetails">  <span class="labemp">Mobile: </span><span class="empdetails"><a >{{x.employeeNumber}}</a></span></p>
+                        <p style="margin-bottom:10px;">  </p> -->
+                                </div>
+
+                                <!-- <p style="margin-left: 17px;"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;99486653x.designation </p> -->
+                                <p class="space"></p>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-sm-4 col-xl-4 col-md-4" style="
+                padding-top: 24px;" >
+
+                        <div class="card pcard">
+
+
+                            <button (click)="changeButtons($event)" (click)="removeEmployeeFromProject(x)"
+                                class="btn btn-outline-danger" matTooltip="UnAssign Employee"
+                                style="padding: -11px;max-width: 32px;/* margin-left: 264px; *//* margin-top: 5px; *//* height: 26px; */float: right;margin-left: auto; ">
+                                <i class="fa fa-minus-circle" aria-hidden="true"></i></button>
+
+                            <div class="col-sm-12 col-xl-12 col-md-12">
+                                <div class="col-sm-2 col-xl-2 col-md-2" style="
+                                margin-top: -15px;
+                            ">
+
+                                    <img src="./assets/images/admin-avatar.png"
+                                        style="width:60px; height:60px;margin-left:-20px; ">
+                                </div>
+                                <div class="col-sm-10 col-xl-10 col-md-10">
+                                    <p class="empdetails">
+                                        <span class="labemp">Name: </span><span class="empdetails">
+                                            Shbhash  Kodavatikanti</span></p>
+
+
+                                    <p class="empdetails"> <span class="labemp">Employee Id: </span><span
+                                            class="empdetails"><a>520162158</a></span></p>
+                                    <p class="empdetails"> <span class="labemp"> Email:</span><span
+                                            class="empdetails"><a>sahithya.kodavatikanti@prutech.com</a></span></p>
+                                    <!-- <p class="empdetails">  <span class="labemp">Department: </span><span class="empdetails"><a >{{x.employeeNumber}}</a></span></p>
+                        <p class="empdetails">  <span class="labemp">Mobile: </span><span class="empdetails"><a >{{x.employeeNumber}}</a></span></p>
+                        <p style="margin-bottom:10px;">  </p> -->
+                                </div>
+
+                                <!-- <p style="margin-left: 17px;"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;99486653x.designation </p> -->
+                                <p class="space"></p>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+        <div style="  float: right;padding-top: 40px;">
+            <button class="btn btn-primary" (click)="submit()">SAVE</button>
+        </div>
+
+    </mat-tab>
+</mat-tab-group>
+

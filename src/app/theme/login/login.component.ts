@@ -44,10 +44,9 @@ export class LoginComponent implements OnInit {
 			return;
 		} else {
 			this.httpService.doPost('login', this.loginForm.value).subscribe((result) => {
-				sessionStorage.setItem('username', result['first name'] + ' ' + result['last name']);
-				sessionStorage.setItem('access-token', result.access_token);
-				localStorage.setItem('access-token', result.access_token);
-				this.notificationService.showSucessNotification('', result['message']);
+			localStorage.setItem("access-token",result.access_token)
+			// localStorage.setItem("employeedetails",result)
+				this.notificationService.showSucessNotification('Login Successfully', '');
 				this.router.navigate([ '/user-management/role-privileges' ]);
 			});
 		}

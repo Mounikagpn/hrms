@@ -16,8 +16,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { EmployeesListComponent } from './employees-list/employees-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
 @NgModule({
-	declarations: [ EmployeeComponent, EmployeesListComponent, EmployeeDetailsComponent ],
+	declarations: [ EmployeeComponent, EmployeesListComponent, EmployeeDetailsComponent, EmployeeProfileComponent,  ],
 	imports: [
 		CommonModule,
 		FormsModule,

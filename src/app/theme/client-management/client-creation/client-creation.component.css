@@ -1,0 +1,63 @@
+#center {
+    grid-row: 1/1;
+    grid-column: 2/2;
+    overflow: hidden;
+}
+.headStyle
+{
+    color:blue;
+     text-align: center;
+}
+.nameStyle
+{
+    color:grey;
+    text-align: center;   
+}
+.majorStyle
+{
+    color:orange;
+    text-align: center;
+}
+.ag-header-row {
+    font-size: x-large;
+    font-style: unset;
+    /* font-family: unset */
+}
+.statusCard
+{
+  max-width: 110px;
+  text-align: center;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+.datemoment
+{
+    display: flex;
+    float:right;
+    list-style: none;
+
+}
+.datemoment li
+{
+   padding-left:29px;
+}
+/* Icon Styles */
+div  i {
+    cursor: pointer;
+  }
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #2196f3;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    width: 181px;
+    height: 30px;
+}
+.col-sm-12
+{
+    margin-top: 12px;
+}

@@ -1,0 +1,415 @@
+<div class="row">
+  <div class="col-md-12">
+    <form [formGroup]="clientCreationForm">
+      <div style="padding-top: 2%">
+        <div class="panel panel-default panel-shadow">
+          <div class="panel-heading" style="padding-left: 0%">
+            <div class="card style">
+              <strong> Client Creation</strong>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="col-sm-12">
+              <div class="col-sm-12" style=" padding-left: 2%">
+                <label>Client Title *</label>
+                <input type="text" class="form-control" placeholder="Client Details" formControlName="clientName">
+                <span
+                  *ngIf="clientCreationForm.controls['clientName'].hasError('required') && clientCreationForm.controls['clientName'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <!-- <span *ngIf="clientCreationForm.controls['clientName'].hasError('pattern')" class="failed-validation">
+                  Client Name Should be Alphabets and Numeric
+                </span> -->
+                <!-- <span *ngIf="clientCreationForm.controls['clientName'].hasError('minlength')" class="failed-validation">
+                  Client Name Should not be less than 3 Characters
+                </span>
+                <span *ngIf="clientCreationForm.controls['clientName'].hasError('maxlength')" class="failed-validation">
+                  Client Name Should not be greather than 75 Characters
+                </span> -->
+              </div>
+            </div>
+
+            <div class="col-sm-12" style="padding-top: 1%; margin-left:7px">
+              <div class="col-sm-6">
+                <label>Client Contact Full Name *</label>
+                <input type="text" class="form-control" (keypress)="this.global.keyPresss($event)"
+                  placeholder="Contact First Name" formControlName="personFirstName">
+                <span
+                  *ngIf="clientCreationForm.controls['personFirstName'].hasError('required') && clientCreationForm.controls['personFirstName'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <!-- <span *ngIf="clientCreationForm.controls['personFirstName'].hasError('pattern')"
+                  class="failed-validation">
+                  First Name Should be in alphabets Only
+                </span>
+                <span *ngIf="clientCreationForm.controls['personFirstName'].hasError('minlength')"
+                  class="failed-validation">
+                  First Name Should not be less than 3 Characters
+                </span> -->
+
+              </div>
+              <!-- <div class="col-sm-6">
+                <label>Client Contact Last Name *</label>
+                <input type="text" class="form-control" (keypress)="this.global.keyPresss($event)"
+                  placeholder="Contact Last Name" formControlName="personLastName">
+                <span
+                  *ngIf="clientCreationForm.controls['personLastName'].hasError('required') && clientCreationForm.controls['personLastName'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <span *ngIf="clientCreationForm.controls['personLastName'].hasError('pattern')"
+                  class="failed-validation">
+                  Last Name Should be in alphabets Only
+                </span>
+                <span *ngIf="clientCreationForm.controls['personLastName'].hasError('minlength')"
+                  class="failed-validation">
+                  Last Name Should not be less than 3 Characters
+                </span>
+                <span *ngIf="clientCreationForm.controls['personLastName'].hasError('maxlength')"
+                  class="failed-validation">
+                  Last Name Should not be greater than 20 Characters
+                </span>
+              </div> -->
+            </div>
+            <div class="col-sm-12" style="padding-top: 1%; margin-left:7px">
+              <div class="col-sm-6">
+                <label>Client Contact Number *</label>
+                <input type="text" class="form-control" placeholder="Contact Number " formControlName="contactNumber"
+                  (keypress)="this.global.keyPress($event)" maxlength="11">
+                <span
+                  *ngIf="clientCreationForm.controls['contactNumber'].hasError('required') && clientCreationForm.controls['contactNumber'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+                <span *ngIf="clientCreationForm.controls['contactNumber'].hasError('pattern')"
+                  class="failed-validation">
+                  Phone Number Should be in Numbers Only
+                </span>
+                <!-- <span *ngIf="clientCreationForm.controls['contactNumber'].hasError('minlength')"
+                  class="failed-validation">
+                  Contact Number Must be 10 Digits
+                </span> -->
+                <!-- <span *ngIf="clientCreationForm.controls['contactNumber'].hasError('maxlength')"
+                  class="failed-validation">
+                  Phone Number Should be in greather than 10 Characters
+                </span> -->
+              </div>
+              <div class="col-sm-6">
+                <label>Client Contact Email Id *</label>
+                <input type="text" class="form-control" placeholder="Contact Email Id " formControlName="emailId">
+                <span *ngIf="clientCreationForm.controls['emailId'].hasError('pattern')" class="failed-validation">
+                  Please Enter Valid Email ID
+                </span>
+                <span
+                  *ngIf="clientCreationForm.controls['emailId'].hasError('required') && clientCreationForm.controls['emailId'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+              </div>
+            </div>
+            <div class="col-sm-12" style="padding-left: 3%;padding-top: 1%; margin-left:7px">
+
+              <label>Department *</label>
+
+              <input type="text" class="form-control" (keypress)="this.global.keyPresss($event)"
+                placeholder="Department " formControlName="designation">
+              <span
+                *ngIf="clientCreationForm.controls['designation'].hasError('required') && clientCreationForm.controls['designation'].touched"
+                style="color:red" class="failed.validation">
+                Field Required
+              </span>
+              <span *ngIf="clientCreationForm.controls['designation'].hasError('pattern')" class="failed-validation">
+                Department Name Should be in alphabets Only
+              </span>
+              <span *ngIf="clientCreationForm.controls['designation'].hasError('minlength')" class="failed-validation">
+                Department Name Should not be less than 3 Characters
+              </span>
+              <span *ngIf="clientCreationForm.controls['designation'].hasError('maxlength')" class="failed-validation">
+                Department Name Should not be in greather than 25 Characters
+              </span>
+            </div>
+            <div style="
+            margin-left: 7px;
+        ">
+             
+                <div class="col-sm-12" style="
+                margin-left: 18px;
+            ">
+                  <label class="center-block">Line 1 *
+
+                    <input class="form-control" formControlName="line1" placeholder="Line 1">
+                  </label>
+                  <span
+                    *ngIf="clientCreationForm.controls['line1'].hasError('required') && clientCreationForm.controls['line1'].touched"
+                    style="color:red" class="failed.validation">
+                    Field Required
+                  </span>
+                  <!-- <div *ngIf="address.get('line1').hasError('maxlength')" style="color:red">
+                        {{_StringResourceErrors.MAXLENGTH}}
+                      </div>  -->
+                </div>
+              <div class="col-sm-12">
+                <div class="col-sm-12">
+                  <label class="center-block">Line 2
+                    <input class="form-control" formControlName="line2" placeholder="Line 2">
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="col-sm-12">
+                <div class="col-sm-6">
+                  <label for="sel1">Country</label>
+                  <input class="form-control" id="Country" formControlName="country" placeholder="country">
+                  <span
+                    *ngIf="clientCreationForm.controls['country'].hasError('required') && clientCreationForm.controls['country'].touched"
+                    style="color:red" class="failed.validation">
+                    Field Required
+                  </span>
+                </div>
+                <div class="col-sm-6">
+                  <label for="sel1">State</label>
+                  <input formControlName="state" placeholder="state" class="form-control input-rounded" />
+                  <span
+                    *ngIf="clientCreationForm.controls['state'].hasError('required') && clientCreationForm.controls['state'].touched"
+                    style="color:red" class="failed.validation">
+                    Field Required
+                  </span>
+                </div>
+              </div>
+
+              <div class="col-sm-12" style="padding-top: 1%;">
+                <div class="col-sm-6">
+                  <label class="center-block">City *
+                    <input class="form-control" formControlName="city" placeholder="City"
+                      (keypress)="this.global.keyPresss($event)">
+                  </label>
+                  <span
+                    *ngIf="clientCreationForm.controls['city'].hasError('required') && clientCreationForm.controls['city'].touched"
+                    style="color:red" class="failed.validation">
+                    Field Required
+                  </span>
+                  <!-- <span *ngIf="address.get('city').hasError('required')&&address.get('city').touched"
+                        style="color:red">
+                        {{_StringResourceErrors.FIELD_REQUIRED}}
+                      </div>
+                      <div *ngIf="address.get('city').hasError('maxlength')" style="color:red">
+                        {{_StringResourceErrors.MAXLENGTH}}
+                      </div> -->
+                </div>
+
+              </div>
+
+              <div class="col-sm-12" style="padding-top: 1%;">
+                <div class="col-sm-6">
+                  <label class="center-block"> ZipCode *
+                    <input class="form-control" formControlName="zipCode" placeholder=Zipcode maxlength=6
+                      (keypress)="this.global.keyPress($event)">
+                  </label>
+                  <span
+                    *ngIf="clientCreationForm.controls['zipCode'].hasError('required') && clientCreationForm.controls['zipCode'].touched"
+                    style="color:red" class="failed.validation">
+                    Field Required
+                  </span>
+                </div>
+
+              </div>
+            </div>
+            <br>
+
+
+            <!-- new address array-->
+<div class="col-sm-12">
+  <div class="col-sm-6">
+    <label>Corp Name *</label>
+    <input type="text" class="form-control" 
+      placeholder="Corp Name" formControlName="cropName">
+    <span
+      *ngIf="clientCreationForm.controls['cropName'].hasError('required') && clientCreationForm.controls['cropName'].touched"
+      style="color:red" class="failed.validation">
+      Field Required
+    </span>
+   
+  </div>
+ 
+    <div class="col-sm-6">
+      <label>Vendorship Type *</label>
+      <input type="text" class="form-control" 
+        placeholder="Vendorship Type" formControlName="vendorship">
+      <span
+        *ngIf="clientCreationForm.controls['vendorship'].hasError('required') && clientCreationForm.controls['vendorship'].touched"
+        style="color:red" class="failed.validation">
+        Field Required
+      </span>
+     
+  </div>
+</div>
+<div class="col-sm-12">
+  <div class="col-sm-6">
+    <label>Vendorship Start Date *</label>
+   
+    <input type="text" placeholder="MM/DD/YYYY" class="form-control" bsDatepicker
+    [bsConfig]="datePickerConfg"formControlName="vStartDate">
+
+  
+    <span
+      *ngIf="clientCreationForm.controls['vStartDate'].hasError('required') && clientCreationForm.controls['vStartDate'].touched"
+      style="color:red" class="failed.validation">
+      Field Required
+    </span>
+   
+  </div>
+  <div class="col-sm-6">
+   
+      <label>Vendorship End Date *</label>
+      <input type="text" placeholder="MM/DD/YYYY" class="form-control" bsDatepicker
+      [bsConfig]="datePickerConfg"formControlName="vEndDate">
+     
+      <span
+        *ngIf="clientCreationForm.controls['vEndDate'].hasError('required') && clientCreationForm.controls['vEndDate'].touched"
+        style="color:red" class="failed.validation">
+        Field Required
+      </span>
+     
+  </div>
+</div>
+<div class="col-sm-12">
+  <div class="col-sm-6">
+    <label>MSA Number </label>
+    <input type="text" class="form-control" 
+      placeholder="MSA Number" formControlName="masNumber">
+   
+   
+  </div>
+ 
+    <div class="col-sm-6">
+      <label>C2C Limits *</label>
+      <input type="text" class="form-control" 
+        placeholder="C2C Limits" formControlName="c2c">
+      <span
+        *ngIf="clientCreationForm.controls['c2c'].hasError('required') && clientCreationForm.controls['c2c'].touched"
+        style="color:red" class="failed.validation">
+        Field Required
+      </span>
+     
+    </div>
+</div>
+<div class="col-sm-12">
+  <div class="col-sm-6">
+    <label>Term Limits</label>
+    <input type="text" class="form-control" 
+      placeholder="Term Limits" formControlName="termLimits">
+ 
+   
+  </div>
+ 
+    <div class="col-sm-6">
+      <label>Business Sector *</label>
+      <input type="text" class="form-control" 
+        placeholder="Business Sector" formControlName="BusinessSector">
+      <span
+        *ngIf="clientCreationForm.controls['BusinessSector'].hasError('required') && clientCreationForm.controls['BusinessSector'].touched"
+        style="color:red" class="failed.validation">
+        Field Required
+      </span>
+     
+    </div>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="panel panel-default panel-shadow">
+        <div class="panel-heading" style="padding-left: 0%;">
+          <div class="card style">
+            <strong>Contract Details</strong></div>
+        </div>
+        <div class="panel-body">
+
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <label>Contract Name *</label>
+              <input type="text" class="form-control" 
+                placeholder="Contract Name" formControlName="contractName">
+              <span
+                *ngIf="clientCreationForm.controls['contractName'].hasError('required') && clientCreationForm.controls['contractName'].touched"
+                style="color:red" class="failed.validation">
+                Field Required
+              </span>
+             
+            </div>
+            <div class="col-sm-6">
+             
+                <label>Number Of Contracts </label>
+                <input type="text" class="form-control" 
+                  placeholder="Vendorship End Date" formControlName="numberContract">
+               
+               
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <label>Contract Cell Phone *</label>
+              <input type="text" class="form-control" 
+                placeholder="Contract Cell Phone" formControlName="contractCellPhone">
+              <span
+                *ngIf="clientCreationForm.controls['contractCellPhone'].hasError('required') && clientCreationForm.controls['contractCellPhone'].touched"
+                style="color:red" class="failed.validation">
+                Field Required
+              </span>
+             
+            </div>
+            <div class="col-sm-6">
+             
+                <label>Contract Effective Date *</label>
+                <input type="text" placeholder="MM/DD/YYYY" class="form-control" bsDatepicker
+                [bsConfig]="datePickerConfg"formControlName="cEffectiveDate">
+               
+                <span
+                  *ngIf="clientCreationForm.controls['cEffectiveDate'].hasError('required') && clientCreationForm.controls['cEffectiveDate'].touched"
+                  style="color:red" class="failed.validation">
+                  Field Required
+                </span>
+               
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="col-sm-6">
+              <label>Contract End Date *</label>
+              <input type="text" class="form-control" 
+                placeholder="Contract End Date" formControlName="CendDate">
+              <span
+                *ngIf="clientCreationForm.controls['CendDate'].hasError('required') && clientCreationForm.controls['CendDate'].touched"
+                style="color:red" class="failed.validation">
+                Field Required
+              </span>
+             
+            </div>
+           
+          </div>
+        </div>
+
+      </div>
+
+      <div class="float-right">
+        <button type="button" [routerLink]="['/project-management/client-creation']" class="btn btn-secondary"
+          id="taskCreate" (click)="DeleteProject()">Cancel
+        </button>
+        <button type="button" class="btn btn-primary" id="taskCreate" (click)="onSubmit()">
+          Submit</button> &nbsp;
+        <!-- <button *ngIf="ClientBtn" [disabled]="!clientCreationForm.valid" type="button"
+          class="btn btn-success" id="taskCreate" (click)="upDate()">
+          Update</button> &nbsp; -->
+
+      </div>
+    </form>
+
+
+  </div>
+
+</div>
